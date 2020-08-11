@@ -29,6 +29,10 @@ class CourseItemViewModel: Identifiable, ObservableObject {
         return course.title
     }
     
+    var teacherName: String {
+        return course.teacher.name
+    }
+    
     @Published var image: UIImage?
     
     func getImage() {

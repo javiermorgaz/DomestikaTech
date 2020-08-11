@@ -16,18 +16,51 @@ struct CourseGridItemView: View {
     }
     
     var body: some View {
-        VStack(alignment: .center, spacing: 0, content: {
+        VStack(alignment: .leading, spacing: 0, content: {
             Image(uiImage: viewModel.image ?? UIImage())
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(height: 125)
+                .frame(height: 150)
                 .clipped()
-            Rectangle().fill(Color.orange)
-                .frame(width: .none, height: 75)
-            Rectangle().fill(Color.gray)
-                .frame(width: .none, height: 45)
+            VStack(alignment: .leading, spacing: 0, content: {
+                Spacer().frame(height: 20)
+                Text(viewModel.title)
+                    .font(.subheadline)
+                    .lineLimit(2)
+                    .multilineTextAlignment(.leading)
+                    .padding(.leading, 20).padding(.trailing, 20)
+                    .fixedSize(horizontal: false, vertical: true)
+                Spacer().frame(height: 8)
+                Text("de \(viewModel.teacherName)")
+                    .font(.caption)
+                    .foregroundColor(Color.gray)
+                    .lineLimit(2)
+                    .multilineTextAlignment(.leading)
+                    .padding(.leading, 20).padding(.trailing, 20)
+                
+                Spacer(minLength: 20)
+            })
+            .frame(height: 90)
+            
+            Rectangle().fill(Color.gray.opacity(0.1))
+                .frame(height: 1)
+            
+            HStack {
+                Text("Ver curso")
+                    .font(.caption)
+                    .lineLimit(2)
+                    .padding()
+                Spacer()
+                Image(systemName: "chevron.right")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .foregroundColor(Color.gray)
+                    .frame(width: 12, height: 12)
+                    .padding(.trailing, 10)
+                    
+            }
+            .frame(height: 45)
         })
-        .cornerRadius(5)
     }
 }
 

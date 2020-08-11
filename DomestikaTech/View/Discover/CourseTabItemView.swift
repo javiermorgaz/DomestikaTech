@@ -36,25 +36,17 @@ struct CourseTabItemView: View {
                         .lineLimit(2)
                         .multilineTextAlignment(.center)
                     Button("Watch") {
-
-                    }
+                        
+                    }.buttonStyle(PlainButtonStyle())
+                    .font(.callout)
+                    .frame(width: 110, height: 35)
+                    .background(Color.white)
+                    .cornerRadius(3)
                 }
                 Spacer()
                     .frame(width: 50)
             }
             .padding(.bottom, 50)
-        }
-    }
-}
-
-struct CourseTabItemView_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-
-            let course = Course(courseId: "12", thumbnail: "", title: "Introduction to Adobe Photoshop", trailer: "", description: "", location: "", teacher: Teacher(name: "", avatar: ""), reviews: Reviews(positive: 0, total: 0), lessonsCount: 0, students: 0, audio: "", subtitles: [String](), level: "")
-            
-            CourseTabItemView(viewModel: CourseItemViewModel(course: course, getImageUseCase: GetImage(coursesRepository: CoursesFetcherRepository(restClient: RestClient(baseUrl: Constants.baseURL)))))
-            
         }
     }
 }
