@@ -196,8 +196,8 @@
 				1E30A3AD24E2EB870077B33E /* DiscoverView.swift */,
 				1E30A3B324E2EEB20077B33E /* DiscoverViewModel.swift */,
 				1E30A3B524E2EF370077B33E /* CourseTabItemView.swift */,
-				1E30A3B724E2EF600077B33E /* CourseItemViewModel.swift */,
 				1E30A3B924E2EF850077B33E /* CourseGridItemView.swift */,
+				1E30A3B724E2EF600077B33E /* CourseItemViewModel.swift */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
