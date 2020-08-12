@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct CourseGridItemView: View {
     
@@ -17,7 +18,8 @@ struct CourseGridItemView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0, content: {
-            Image(uiImage: viewModel.image ?? UIImage())
+            WebImage(url: viewModel.image)
+                .renderingMode(.original)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(height: 150)
@@ -61,16 +63,5 @@ struct CourseGridItemView: View {
             }
             .frame(height: 45)
         })
-    }
-}
-
-struct CourseGridItemView_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-
-            let course = Course(courseId: "12", thumbnail: "", title: "", trailer: "", description: "", location: "", teacher: Teacher(name: "", avatar: ""), reviews: Reviews(positive: 0, total: 0), lessonsCount: 0, students: 0, audio: "", subtitles: [String](), level: "")
-            
-            CourseGridItemView(viewModel: CourseItemViewModel(course: course, getImageUseCase: GetImage(coursesRepository: CoursesFetcherRepository(restClient: RestClient(baseUrl: Constants.baseURL)))))
-        }
     }
 }

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct CourseTabItemView: View {
 
@@ -18,7 +19,8 @@ struct CourseTabItemView: View {
     var body: some View {
         ZStack {
             GeometryReader { geometry in
-                Image(uiImage: viewModel.image ?? UIImage())
+                WebImage(url: viewModel.image)
+                    .renderingMode(.original)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: geometry.size.width, height: geometry.size.height)
@@ -39,6 +41,7 @@ struct CourseTabItemView: View {
                         Text("Watch")
                             .font(.callout)
                     }
+                    .buttonStyle(PlainButtonStyle())
                     .frame(width: 110, height: 35)
                     .foregroundColor(Color.black)
                     .background(Color.white)

@@ -14,19 +14,17 @@ class DiscoverViewModel: ObservableObject {
     @Published var isLoaded = false
     
     private let getCoursesUseCase: GetCoursesUseCase
-    private let getImageUseCase: GetImageUseCase
     private var cancellable = Set<AnyCancellable>()
     
-    init(getCoursesUseCase: GetCoursesUseCase, getImageUseCase: GetImageUseCase) {
+    init(getCoursesUseCase: GetCoursesUseCase) {
         self.getCoursesUseCase = getCoursesUseCase
-        self.getImageUseCase = getImageUseCase
     }
         
     func getCourses() {
         
         getCoursesUseCase.exec()
             .receive(on: DispatchQueue.main)
-            .map { courses in courses.map { CourseItemViewModel(course: $0, getImageUseCase: self.getImageUseCase) }}
+            .map { courses in courses.map { CourseItemViewModel(course: $0) }}
             .sink(receiveCompletion: { error in
                 switch error {
                 case .finished:

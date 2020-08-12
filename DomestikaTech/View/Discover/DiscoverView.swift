@@ -24,28 +24,7 @@ struct DiscoverView: View {
             ScrollView(.vertical, showsIndicators: false, content: {
                 VStack(alignment: .center, spacing: 0, content: {
                     if !viewModel.courseItemsViewModel.isEmpty {
-                        ZStack(alignment: .top) {
-                            coursesTabView
-                            HStack {
-                                Image("logo")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 38, height: 38)
-                                    .padding(.leading, 15)
-                                Spacer()
-                                Button(action: {
-                                    print("Search button was tapped")
-                                }) {
-                                    Image(systemName: "magnifyingglass")
-                                }
-                                .buttonStyle(PlainButtonStyle())
-                                .frame(width: 38, height: 38)
-                                .background(Color.white)
-                                .cornerRadius(19)
-                                .padding(.trailing, 15)
-                            }
-                            .padding(.top, 50)
-                        }
+                        coursesTabView
 
                         VStack(alignment: .leading, spacing: 0, content: {
                             coursesGridHeaderView
@@ -73,20 +52,38 @@ extension DiscoverView {
     }
     
     var coursesTabView: some View {
-        TabView{
-            let tabCourses = viewModel.courseItemsViewModel[0...3]
-            ForEach(tabCourses, id: \.id) { model in
-                CourseTabItemView(viewModel: model)
-                    .onAppear(perform: model.getImage)
-                    .onDisappear {
-                        model.cancelLoadImage()
-                    }
+        ZStack(alignment: .top) {
+            TabView{
+                let tabCourses = viewModel.courseItemsViewModel[0...3]
+                ForEach(tabCourses, id: \.id) { model in
+                    CourseTabItemView(viewModel: model)
+                }
             }
+            .tabViewStyle(PageTabViewStyle())
+            .frame(width: .none, height: 440)
+            .background(Color(red: 225 / 255, green: 225 / 255, blue: 235 / 255))
+            .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .automatic))
+            
+            HStack {
+                Image("logo")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 38, height: 38)
+                    .padding(.leading, 15)
+                Spacer()
+                Button(action: {
+                    print("Search button was tapped")
+                }) {
+                    Image(systemName: "magnifyingglass")
+                }
+                .buttonStyle(PlainButtonStyle())
+                .frame(width: 38, height: 38)
+                .background(Color.white)
+                .cornerRadius(19)
+                .padding(.trailing, 15)
+            }
+            .padding(.top, 50)
         }
-        .tabViewStyle(PageTabViewStyle())
-        .frame(width: .none, height: 440)
-        .background(Color(red: 225 / 255, green: 225 / 255, blue: 235 / 255))
-        .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .automatic))
     }
     
     var coursesGridHeaderView: some View {
@@ -104,8 +101,6 @@ extension DiscoverView {
                 ForEach(gridCourses, id: \.id) { model in
                     VStack(alignment: .center, spacing: 0, content: {
                         CourseGridItemView(viewModel: model)
-                            .onAppear(perform: model.getImage)
-                            .onDisappear(perform: model.cancelLoadImage)
                     })
                     .frame(width: 265)
                 }
