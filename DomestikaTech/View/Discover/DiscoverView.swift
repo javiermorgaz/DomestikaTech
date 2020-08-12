@@ -39,19 +39,25 @@ struct DiscoverView: View {
             })
             .edgesIgnoringSafeArea(.top)
             .navigationBarItems(leading:
+                                Button(action: {
+                                    print("Domestika button was tapped")
+                                }) {
                                     Image("Brand")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 38, height: 38),
+                                        .renderingMode(.original)
+                                        .frame(width: 30, height: 30)
+                                        .padding(.leading, 4)
+                                }
+                                .buttonStyle(PlainButtonStyle()),
                                 trailing:
                                     Button(action: {
                                         print("Search button was tapped")
                                     }) {
                                         Image("Search")
                                             .renderingMode(.original)
+                                            .frame(width: 30, height: 30)
+                                            .padding(.trailing, 4)
                                     }
                                     .buttonStyle(PlainButtonStyle())
-                                    .frame(width: 38, height: 38)
             )
         }
     }
