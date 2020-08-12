@@ -34,17 +34,19 @@ struct CourseTabItemView: View {
                     Spacer()
                     Text(viewModel.title)
                         .font(.title2)
-                        .foregroundColor(.white)
+                        .fontWeight(.medium)
+                        .foregroundColor(Color.backgroundColor)
                         .lineLimit(2)
                         .multilineTextAlignment(.center)
                     NavigationLink(destination: DetailView()) {
-                        Text("Watch")
+                        Text(LocalizedStringKey("watch"))
                             .font(.callout)
+                            .fontWeight(.medium)
                     }
                     .buttonStyle(PlainButtonStyle())
                     .frame(width: 110, height: 35)
-                    .foregroundColor(Color.black)
-                    .background(Color.white)
+                    .foregroundColor(Color.darkTextColor)
+                    .background(Color.backgroundColor)
                     .cornerRadius(3)
                 }
                 Spacer()

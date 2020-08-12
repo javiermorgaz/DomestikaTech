@@ -18,54 +18,51 @@ struct CourseGridItemView: View {
     
     var body: some View {
         
-        NavigationLink(destination: DetailView()) {
+        VStack(alignment: .leading, spacing: 0, content: {
+            WebImage(url: viewModel.image)
+                .renderingMode(.original)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(height: 150)
+                .clipped()
+            
             VStack(alignment: .leading, spacing: 0, content: {
-                WebImage(url: viewModel.image)
-                    .renderingMode(.original)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(height: 150)
-                    .clipped()
-                VStack(alignment: .leading, spacing: 0, content: {
-                    Spacer().frame(height: 20)
-                    Text(viewModel.title)
-                        .font(.subheadline)
-                        .lineLimit(2)
-                        .multilineTextAlignment(.leading)
-                        .padding(.leading, 20).padding(.trailing, 20)
-                        .fixedSize(horizontal: false, vertical: true)
-                    Spacer().frame(height: 8)
-                    Text("de \(viewModel.teacherName)")
-                        .font(.caption)
-                        .foregroundColor(Color.gray)
-                        .lineLimit(2)
-                        .multilineTextAlignment(.leading)
-                        .padding(.leading, 20).padding(.trailing, 20)
-                    
-                    Spacer(minLength: 20)
-                })
-                .frame(height: 90)
+                Spacer().frame(height: 20)
+                Text(viewModel.title)
+                    .font(.subheadline)
+                    .fontWeight(.medium)
+                    .lineLimit(2)
+                    .multilineTextAlignment(.leading)
+                    .padding(.leading, 20).padding(.trailing, 20)
+                    .fixedSize(horizontal: false, vertical: true)
+                Spacer().frame(height: 8)
+                Text(String.localizedStringWithFormat(NSLocalizedString("de", comment: ""), viewModel.teacherName))
+                    .font(.caption)
+                    .foregroundColor(Color.lightTextColor)
+                    .lineLimit(2)
+                    .multilineTextAlignment(.leading)
+                    .padding(.leading, 20).padding(.trailing, 20)
                 
-                Rectangle().fill(Color.gray.opacity(0.1))
-                    .frame(height: 1)
-                
-                HStack {
-                    Text("Ver curso")
-                        .font(.caption)
-                        .lineLimit(2)
-                        .padding()
-                    Spacer()
-                    Image(systemName: "chevron.right")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .foregroundColor(Color.gray)
-                        .frame(width: 12, height: 12)
-                        .padding(.trailing, 10)
-                    
-                }
-                .frame(height: 45)
+                Spacer(minLength: 20)
             })
-        }
-        .buttonStyle(PlainButtonStyle())
+            .frame(height: 90)
+            
+            Rectangle().fill(Color.separatorColor)
+                .frame(height: 1)
+            
+            HStack {
+                Text(LocalizedStringKey("verCurso"))
+                    .font(.caption)
+                    .lineLimit(2)
+                    .padding(.leading, 20)
+                Spacer()
+                Image("main-disclosure")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 12, height: 12)
+                    .padding(.trailing)
+            }
+            .frame(height: 45)
+        })
     }
 }

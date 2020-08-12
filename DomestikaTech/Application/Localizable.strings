@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  DomestikaTech
+
+  Created by Jmorgaz on 12/08/2020.
+  
+*/
+
+"popular" = "Popular";
+"verCurso" = "Ver Curso";
+"de" = "de %@";
+"watch" = "Watch";

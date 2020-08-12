@@ -25,11 +25,11 @@ struct DiscoverView: View {
                 VStack(alignment: .center, spacing: 0, content: {
                     if !viewModel.courseItemsViewModel.isEmpty {
                         coursesTabView
-
+                        
                         VStack(alignment: .leading, spacing: 0, content: {
                             coursesGridHeaderView
                             coursesGridView
-                            Spacer(minLength: 70)
+                            Spacer(minLength: 40)
                         })
                     } else {
                         discoverEmptyView
@@ -37,9 +37,22 @@ struct DiscoverView: View {
                 })
                 .onAppear(perform: viewModel.getCourses)
             })
-            .background(Color(red: 254 / 255, green: 255 / 255, blue: 255 / 255))
             .edgesIgnoringSafeArea(.top)
-            .navigationBarHidden(true)
+            .navigationBarItems(leading:
+                                    Image("Brand")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 38, height: 38),
+                                trailing:
+                                    Button(action: {
+                                        print("Search button was tapped")
+                                    }) {
+                                        Image("Search")
+                                            .renderingMode(.original)
+                                    }
+                                    .buttonStyle(PlainButtonStyle())
+                                    .frame(width: 38, height: 38)
+            )
         }
     }
 }
@@ -52,43 +65,21 @@ extension DiscoverView {
     }
     
     var coursesTabView: some View {
-        ZStack(alignment: .top) {
-            TabView{
-                let tabCourses = viewModel.courseItemsViewModel[0...3]
-                ForEach(tabCourses, id: \.id) { model in
-                    CourseTabItemView(viewModel: model)
-                }
+        TabView{
+            let tabCourses = viewModel.courseItemsViewModel[0...3]
+            ForEach(tabCourses, id: \.id) { model in
+                CourseTabItemView(viewModel: model)
             }
-            .tabViewStyle(PageTabViewStyle())
-            .frame(width: .none, height: 440)
-            .background(Color(red: 225 / 255, green: 225 / 255, blue: 235 / 255))
-            .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .automatic))
-            
-            HStack {
-                Image("logo")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 38, height: 38)
-                    .padding(.leading, 15)
-                Spacer()
-                Button(action: {
-                    print("Search button was tapped")
-                }) {
-                    Image(systemName: "magnifyingglass")
-                }
-                .buttonStyle(PlainButtonStyle())
-                .frame(width: 38, height: 38)
-                .background(Color.white)
-                .cornerRadius(19)
-                .padding(.trailing, 15)
-            }
-            .padding(.top, 50)
         }
+        .tabViewStyle(PageTabViewStyle())
+        .frame(width: .none, height: 440)
+        .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .automatic))
     }
     
     var coursesGridHeaderView: some View {
-        Text("Popular")
+        Text(LocalizedStringKey("popular"))
             .font(.body)
+            .fontWeight(.medium)
             .padding(.bottom, 20).padding(.leading, 20)
             .frame(width: .none, height: 80, alignment: .bottom)
     }
@@ -99,16 +90,22 @@ extension DiscoverView {
                 let lastIndex = viewModel.courseItemsViewModel.count - 1
                 let gridCourses = viewModel.courseItemsViewModel[4...lastIndex]
                 ForEach(gridCourses, id: \.id) { model in
-                    VStack(alignment: .center, spacing: 0, content: {
-                        CourseGridItemView(viewModel: model)
-                    })
-                    .frame(width: 265)
+                    NavigationLink(destination: DetailView()) {
+                        ZStack {
+                            Rectangle()
+                                .fill(Color.white)
+                            CourseGridItemView(viewModel: model)
+                                .frame(width: 265)
+                        }
+                        
+                    }
+                    .buttonStyle(PlainButtonStyle())
                 }
-                .background(Color.white)
+                .background(Color.backgroundColor)
                 .cornerRadius(5)
                 .clipped()
-                .padding(.bottom, 10)
-                .shadow(color: Color.gray.opacity(0.1), radius: 5, x: 0, y: 3)
+                .padding(.bottom, 30)
+                .shadow(color: Color.gray.opacity(0.1), radius: 20, x: 0, y: 0)
             }
             .padding(.leading, 20)
             .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 50))
