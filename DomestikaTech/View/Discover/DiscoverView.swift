@@ -45,7 +45,7 @@ struct DiscoverView: View {
                                     Image("Brand")
                                         .renderingMode(.original)
                                         .frame(width: 30, height: 30)
-                                        .padding(.leading, 4)
+                                        .padding(.leading, 4).padding(.bottom, 5)
                                 }
                                 .buttonStyle(PlainButtonStyle()),
                                 trailing:
@@ -55,7 +55,7 @@ struct DiscoverView: View {
                                         Image("Search")
                                             .renderingMode(.original)
                                             .frame(width: 30, height: 30)
-                                            .padding(.trailing, 4)
+                                            .padding(.trailing, 4).padding(.bottom, 5)
                                     }
                                     .buttonStyle(PlainButtonStyle())
             )
