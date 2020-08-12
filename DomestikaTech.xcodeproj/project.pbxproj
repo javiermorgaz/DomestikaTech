@@ -24,6 +24,7 @@
 		1E30A3B624E2EF370077B33E /* CourseTabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E30A3B524E2EF370077B33E /* CourseTabItemView.swift */; };
 		1E30A3B824E2EF600077B33E /* CourseItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E30A3B724E2EF600077B33E /* CourseItemViewModel.swift */; };
 		1E30A3BA24E2EF850077B33E /* CourseGridItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E30A3B924E2EF850077B33E /* CourseGridItemView.swift */; };
+		1E67894824E3DE1400765CA2 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E67894724E3DE1400765CA2 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		1E30A3B524E2EF370077B33E /* CourseTabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTabItemView.swift; sourceTree = "<group>"; };
 		1E30A3B724E2EF600077B33E /* CourseItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseItemViewModel.swift; sourceTree = "<group>"; };
 		1E30A3B924E2EF850077B33E /* CourseGridItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseGridItemView.swift; sourceTree = "<group>"; };
+		1E67894724E3DE1400765CA2 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +206,7 @@
 		1E30A36824E281ED0077B33E /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				1E67894724E3DE1400765CA2 /* DetailView.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				1E30A3B824E2EF600077B33E /* CourseItemViewModel.swift in Sources */,
 				1E30A37324E28A8A0077B33E /* CoursesRepository.swift in Sources */,
 				1E30A3BA24E2EF850077B33E /* CourseGridItemView.swift in Sources */,
+				1E67894824E3DE1400765CA2 /* DetailView.swift in Sources */,
 				1E30A37524E28AB00077B33E /* Course.swift in Sources */,
 				1E30A36F24E286A20077B33E /* DomestikaAPI.swift in Sources */,
 				1E30A33924E27E4C0077B33E /* DomestikaTechApp.swift in Sources */,

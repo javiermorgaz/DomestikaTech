@@ -35,11 +35,12 @@ struct CourseTabItemView: View {
                         .foregroundColor(.white)
                         .lineLimit(2)
                         .multilineTextAlignment(.center)
-                    Button("Watch") {
-                        
-                    }.buttonStyle(PlainButtonStyle())
-                    .font(.callout)
+                    NavigationLink(destination: DetailView()) {
+                        Text("Watch")
+                            .font(.callout)
+                    }
                     .frame(width: 110, height: 35)
+                    .foregroundColor(Color.black)
                     .background(Color.white)
                     .cornerRadius(3)
                 }

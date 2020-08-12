@@ -19,6 +19,8 @@ class CourseItemViewModel: Identifiable, ObservableObject {
     init(course: Course, getImageUseCase: GetImageUseCase) {
         self.course = course
         self.getImageUseCase = getImageUseCase
+        
+        getImage()
     }
     
     var id: String {
