@@ -3,12 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1E30A33924E27E4C0077B33E /* DomestikaTechApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E30A33824E27E4C0077B33E /* DomestikaTechApp.swift */; };
-		1E30A33B24E27E4C0077B33E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E30A33A24E27E4C0077B33E /* ContentView.swift */; };
 		1E30A33D24E27E4E0077B33E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E30A33C24E27E4E0077B33E /* Assets.xcassets */; };
 		1E30A34024E27E4E0077B33E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E30A33F24E27E4E0077B33E /* Preview Assets.xcassets */; };
 		1E30A34B24E27E4E0077B33E /* DomestikaTechTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E30A34A24E27E4E0077B33E /* DomestikaTechTests.swift */; };
@@ -18,6 +17,17 @@
 		1E30A37124E287960077B33E /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E30A37024E287960077B33E /* RestClient.swift */; };
 		1E30A37324E28A8A0077B33E /* CoursesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E30A37224E28A8A0077B33E /* CoursesRepository.swift */; };
 		1E30A37524E28AB00077B33E /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E30A37424E28AB00077B33E /* Course.swift */; };
+		1E30A3AE24E2EB870077B33E /* DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E30A3AD24E2EB870077B33E /* DiscoverView.swift */; };
+		1E30A3B024E2ECF50077B33E /* GetCoursesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E30A3AF24E2ECF50077B33E /* GetCoursesUseCase.swift */; };
+		1E30A3B424E2EEB20077B33E /* DiscoverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E30A3B324E2EEB20077B33E /* DiscoverViewModel.swift */; };
+		1E30A3B624E2EF370077B33E /* CourseTabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E30A3B524E2EF370077B33E /* CourseTabItemView.swift */; };
+		1E30A3B824E2EF600077B33E /* CourseItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E30A3B724E2EF600077B33E /* CourseItemViewModel.swift */; };
+		1E30A3BA24E2EF850077B33E /* CourseGridItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E30A3B924E2EF850077B33E /* CourseGridItemView.swift */; };
+		1E67894824E3DE1400765CA2 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E67894724E3DE1400765CA2 /* DetailView.swift */; };
+		1E67894B24E3F4CA00765CA2 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 1E67894A24E3F4CA00765CA2 /* SDWebImageSwiftUI */; };
+		1E67894D24E438B100765CA2 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E67894C24E438B100765CA2 /* Colors.xcassets */; };
+		1E67894F24E43A4F00765CA2 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E67894E24E43A4F00765CA2 /* Colors.swift */; };
+		1E67895224E4417C00765CA2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1E67895124E4417C00765CA2 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +50,6 @@
 /* Begin PBXFileReference section */
 		1E30A33524E27E4C0077B33E /* DomestikaTech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DomestikaTech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E30A33824E27E4C0077B33E /* DomestikaTechApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomestikaTechApp.swift; sourceTree = "<group>"; };
-		1E30A33A24E27E4C0077B33E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1E30A33C24E27E4E0077B33E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E30A33F24E27E4E0077B33E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1E30A34124E27E4E0077B33E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,6 +64,16 @@
 		1E30A37024E287960077B33E /* RestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestClient.swift; sourceTree = "<group>"; };
 		1E30A37224E28A8A0077B33E /* CoursesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesRepository.swift; sourceTree = "<group>"; };
 		1E30A37424E28AB00077B33E /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		1E30A3AD24E2EB870077B33E /* DiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverView.swift; sourceTree = "<group>"; };
+		1E30A3AF24E2ECF50077B33E /* GetCoursesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCoursesUseCase.swift; sourceTree = "<group>"; };
+		1E30A3B324E2EEB20077B33E /* DiscoverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewModel.swift; sourceTree = "<group>"; };
+		1E30A3B524E2EF370077B33E /* CourseTabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTabItemView.swift; sourceTree = "<group>"; };
+		1E30A3B724E2EF600077B33E /* CourseItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseItemViewModel.swift; sourceTree = "<group>"; };
+		1E30A3B924E2EF850077B33E /* CourseGridItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseGridItemView.swift; sourceTree = "<group>"; };
+		1E67894724E3DE1400765CA2 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		1E67894C24E438B100765CA2 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		1E67894E24E43A4F00765CA2 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		1E67895124E4417C00765CA2 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E67894B24E3F4CA00765CA2 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,7 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				1E30A34124E27E4E0077B33E /* Info.plist */,
-				1E30A33824E27E4C0077B33E /* DomestikaTechApp.swift */,
+				1E67894C24E438B100765CA2 /* Colors.xcassets */,
 				1E30A33C24E27E4E0077B33E /* Assets.xcassets */,
 				1E30A36524E27EA10077B33E /* Application */,
 				1E30A36924E284480077B33E /* Data */,
@@ -154,6 +174,7 @@
 		1E30A36424E27E830077B33E /* Use Cases */ = {
 			isa = PBXGroup;
 			children = (
+				1E30A3AF24E2ECF50077B33E /* GetCoursesUseCase.swift */,
 			);
 			path = "Use Cases";
 			sourceTree = "<group>";
@@ -161,7 +182,10 @@
 		1E30A36524E27EA10077B33E /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				1E67895024E43BD100765CA2 /* Extensions */,
+				1E30A33824E27E4C0077B33E /* DomestikaTechApp.swift */,
 				1E30A36C24E284FD0077B33E /* Constants.swift */,
+				1E67895124E4417C00765CA2 /* Localizable.strings */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -169,7 +193,6 @@
 		1E30A36624E27EB70077B33E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1E30A33A24E27E4C0077B33E /* ContentView.swift */,
 				1E30A36824E281ED0077B33E /* Detail */,
 				1E30A36724E281E40077B33E /* Discover */,
 			);
@@ -179,6 +202,11 @@
 		1E30A36724E281E40077B33E /* Discover */ = {
 			isa = PBXGroup;
 			children = (
+				1E30A3AD24E2EB870077B33E /* DiscoverView.swift */,
+				1E30A3B324E2EEB20077B33E /* DiscoverViewModel.swift */,
+				1E30A3B524E2EF370077B33E /* CourseTabItemView.swift */,
+				1E30A3B924E2EF850077B33E /* CourseGridItemView.swift */,
+				1E30A3B724E2EF600077B33E /* CourseItemViewModel.swift */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -186,6 +214,7 @@
 		1E30A36824E281ED0077B33E /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				1E67894724E3DE1400765CA2 /* DetailView.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -217,6 +246,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		1E67895024E43BD100765CA2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1E67894E24E43A4F00765CA2 /* Colors.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -233,6 +270,9 @@
 			dependencies = (
 			);
 			name = DomestikaTech;
+			packageProductDependencies = (
+				1E67894A24E3F4CA00765CA2 /* SDWebImageSwiftUI */,
+			);
 			productName = DomestikaTech;
 			productReference = 1E30A33524E27E4C0077B33E /* DomestikaTech.app */;
 			productType = "com.apple.product-type.application";
@@ -304,6 +344,9 @@
 				Base,
 			);
 			mainGroup = 1E30A32C24E27E4C0077B33E;
+			packageReferences = (
+				1E67894924E3F4CA00765CA2 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 1E30A33624E27E4C0077B33E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -320,6 +363,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E67894D24E438B100765CA2 /* Colors.xcassets in Resources */,
+				1E67895224E4417C00765CA2 /* Localizable.strings in Resources */,
 				1E30A34024E27E4E0077B33E /* Preview Assets.xcassets in Resources */,
 				1E30A33D24E27E4E0077B33E /* Assets.xcassets in Resources */,
 			);
@@ -346,13 +391,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E30A3B824E2EF600077B33E /* CourseItemViewModel.swift in Sources */,
 				1E30A37324E28A8A0077B33E /* CoursesRepository.swift in Sources */,
+				1E30A3BA24E2EF850077B33E /* CourseGridItemView.swift in Sources */,
+				1E67894F24E43A4F00765CA2 /* Colors.swift in Sources */,
+				1E67894824E3DE1400765CA2 /* DetailView.swift in Sources */,
 				1E30A37524E28AB00077B33E /* Course.swift in Sources */,
 				1E30A36F24E286A20077B33E /* DomestikaAPI.swift in Sources */,
-				1E30A33B24E27E4C0077B33E /* ContentView.swift in Sources */,
 				1E30A33924E27E4C0077B33E /* DomestikaTechApp.swift in Sources */,
 				1E30A37124E287960077B33E /* RestClient.swift in Sources */,
 				1E30A36D24E284FD0077B33E /* Constants.swift in Sources */,
+				1E30A3B024E2ECF50077B33E /* GetCoursesUseCase.swift in Sources */,
+				1E30A3B424E2EEB20077B33E /* DiscoverViewModel.swift in Sources */,
+				1E30A3B624E2EF370077B33E /* CourseTabItemView.swift in Sources */,
+				1E30A3AE24E2EB870077B33E /* DiscoverView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,6 +724,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1E67894924E3F4CA00765CA2 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1E67894A24E3F4CA00765CA2 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E67894924E3F4CA00765CA2 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1E30A32D24E27E4C0077B33E /* Project object */;
 }
