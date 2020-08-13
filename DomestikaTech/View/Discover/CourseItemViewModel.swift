@@ -11,7 +11,7 @@ import SwiftUI
 
 class CourseItemViewModel: Identifiable, ObservableObject {
 
-    private var course: Course
+    private (set) var course: Course
     
     init(course: Course) {
         self.course = course
@@ -26,7 +26,7 @@ class CourseItemViewModel: Identifiable, ObservableObject {
     }
     
     var teacherName: String {
-        return course.teacher.name
+        return String.localizedStringWithFormat(NSLocalizedString("de", comment: ""), course.teacher.name)
     }
         
     var image: URL {
