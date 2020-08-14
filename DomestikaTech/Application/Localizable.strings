@@ -10,3 +10,9 @@
 "verCurso" = "Ver Curso";
 "de" = "de %@";
 "watch" = "Watch";
+"noSubtitles" = "No subtitles available";
+"reviews" = "Positive reviews (%d)";
+"lessons" = "Lessons";
+"students" = "Students";
+"audio" = "Audio:";
+"level" = "Level";

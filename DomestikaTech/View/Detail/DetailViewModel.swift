@@ -44,23 +44,24 @@ struct DetailViewModel {
     }
     
     var positive: String {
-        return course.reviews.positive.description
+        let string = String.localizedStringWithFormat(NSLocalizedString("reviews", comment: ""), course.lessonsCount)
+        return "99% \(string)"
     }
     
     var lessons: String {
-        return course.lessonsCount.description
+        return "\(course.lessonsCount) \(NSLocalizedString("lessons", comment: ""))"
     }
     
     var students: String {
-        return course.students.description
+        return "\(course.students) \(NSLocalizedString("students", comment: ""))"
     }
     
     var audio: String {
-        return course.audio
+        return "\(NSLocalizedString("audio", comment: "")) \(course.audio)"
     }
     
     var subtitles: String {
-        return course.subtitles.isEmpty ? "No subtitles available" : course.subtitles.joined(separator: ", ")
+        return course.subtitles.isEmpty ? NSLocalizedString("noSubtitles", comment: "") : course.subtitles.joined(separator: ", ")
     }
     
     var level: String {

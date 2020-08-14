@@ -29,6 +29,7 @@
 		1E67894F24E43A4F00765CA2 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E67894E24E43A4F00765CA2 /* Colors.swift */; };
 		1E67895224E4417C00765CA2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1E67895124E4417C00765CA2 /* Localizable.strings */; };
 		1E67895624E52D1A00765CA2 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E67895524E52D1A00765CA2 /* DetailViewModel.swift */; };
+		1E67895A24E7078F00765CA2 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E67895924E7078E00765CA2 /* Double.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		1E67894E24E43A4F00765CA2 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		1E67895124E4417C00765CA2 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		1E67895524E52D1A00765CA2 /* DetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		1E67895924E7078E00765CA2 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				1E67894E24E43A4F00765CA2 /* Colors.swift */,
+				1E67895924E7078E00765CA2 /* Double.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 			files = (
 				1E30A3B824E2EF600077B33E /* CourseItemViewModel.swift in Sources */,
 				1E30A37324E28A8A0077B33E /* CoursesRepository.swift in Sources */,
+				1E67895A24E7078F00765CA2 /* Double.swift in Sources */,
 				1E30A3BA24E2EF850077B33E /* CourseGridItemView.swift in Sources */,
 				1E67894F24E43A4F00765CA2 /* Colors.swift in Sources */,
 				1E67894824E3DE1400765CA2 /* DetailView.swift in Sources */,
