@@ -10,7 +10,6 @@ import Combine
 
 protocol CoursesFetchableRepository {
     func fetchCourseList() -> AnyPublisher<[Course], Error>
-    func fetchImage(url: URL) -> AnyPublisher<Data, URLError>
 }
 
 class CoursesFetcherRepository {

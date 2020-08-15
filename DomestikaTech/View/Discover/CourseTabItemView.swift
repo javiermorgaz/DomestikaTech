@@ -11,9 +11,13 @@ import SDWebImageSwiftUI
 struct CourseTabItemView: View {
 
     @ObservedObject var viewModel: CourseItemViewModel
-    
-    init(viewModel: CourseItemViewModel) {
+
+    private var router: DiscoverRouter
+
+    init(viewModel: CourseItemViewModel,
+         router: DiscoverRouter) {
         self.viewModel = viewModel
+        self.router = router
     }
     
     var body: some View {
@@ -39,7 +43,7 @@ struct CourseTabItemView: View {
                         .lineLimit(2)
                         .multilineTextAlignment(.center)
                         .fixedSize(horizontal: false, vertical: true)
-                    NavigationLink(destination: DetailView(viewModel: DetailViewModel(course: viewModel.course))) {
+                    router.navigationView(route: .detailView(course: viewModel.course)) {
                         Text(LocalizedStringKey("watch"))
                             .font(.callout)
                             .foregroundColor(Color.darkTextColor)
@@ -56,5 +60,9 @@ struct CourseTabItemView: View {
             }
             .padding(.bottom, 50)
         }
+    }
+    
+    private func getDetailView(course: Course) -> DetailView {
+        return AppServiceLocator.shared.detail.provideDetailView(course: course)
     }
 }

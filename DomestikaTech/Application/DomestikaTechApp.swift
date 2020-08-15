@@ -17,8 +17,7 @@ struct DomestikaTechApp: App {
 }
 
 func buildContentView() -> AnyView {
-    let getCoursesUseCase = GetCourses(coursesRepository: CoursesFetcherRepository(restClient: RestClient(baseUrl: Constants.baseURL)))
-    let discoverView = DiscoverView(viewModel: DiscoverViewModel(getCoursesUseCase: getCoursesUseCase))
+    let discoverView = AppServiceLocator.shared.discover.provideDiscoverView()
     
     return AnyView(discoverView)
 }
