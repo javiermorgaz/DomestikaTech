@@ -44,8 +44,9 @@ struct DetailViewModel {
     }
     
     var positive: String {
-        let string = String.localizedStringWithFormat(NSLocalizedString("reviews", comment: ""), course.lessonsCount)
-        return "99% \(string)"
+        let total = String.localizedStringWithFormat(NSLocalizedString("reviews", comment: ""), course.reviews.total).replacingOccurrences(of: ".", with: "")
+        let percentage = GetPositiveReviews(positive: course.reviews.positive, total: course.reviews.total).exec()
+        return "\(percentage)% \(total)"
     }
     
     var lessons: String {
@@ -65,6 +66,6 @@ struct DetailViewModel {
     }
     
     var level: String {
-        return course.level
+        return course.level.rawValue.uppercased()
     }
 }

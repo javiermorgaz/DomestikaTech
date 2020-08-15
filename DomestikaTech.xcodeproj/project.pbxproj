@@ -30,6 +30,8 @@
 		1E67895224E4417C00765CA2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1E67895124E4417C00765CA2 /* Localizable.strings */; };
 		1E67895624E52D1A00765CA2 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E67895524E52D1A00765CA2 /* DetailViewModel.swift */; };
 		1E67895A24E7078F00765CA2 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E67895924E7078E00765CA2 /* Double.swift */; };
+		1E67895C24E7163A00765CA2 /* VPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E67895B24E7163A00765CA2 /* VPlayerView.swift */; };
+		1ED9196F24E7C1ED00C12860 /* GetPositiveReviewsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED9196E24E7C1ED00C12860 /* GetPositiveReviewsUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,8 @@
 		1E67895124E4417C00765CA2 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		1E67895524E52D1A00765CA2 /* DetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		1E67895924E7078E00765CA2 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		1E67895B24E7163A00765CA2 /* VPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPlayerView.swift; sourceTree = "<group>"; };
+		1ED9196E24E7C1ED00C12860 /* GetPositiveReviewsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPositiveReviewsUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				1E30A3AF24E2ECF50077B33E /* GetCoursesUseCase.swift */,
+				1ED9196E24E7C1ED00C12860 /* GetPositiveReviewsUseCase.swift */,
 			);
 			path = "Use Cases";
 			sourceTree = "<group>";
@@ -220,6 +225,7 @@
 			children = (
 				1E67894724E3DE1400765CA2 /* DetailView.swift */,
 				1E67895524E52D1A00765CA2 /* DetailViewModel.swift */,
+				1E67895B24E7163A00765CA2 /* VPlayerView.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -410,9 +416,11 @@
 				1E30A36D24E284FD0077B33E /* Constants.swift in Sources */,
 				1E30A3B024E2ECF50077B33E /* GetCoursesUseCase.swift in Sources */,
 				1E30A3B424E2EEB20077B33E /* DiscoverViewModel.swift in Sources */,
+				1ED9196F24E7C1ED00C12860 /* GetPositiveReviewsUseCase.swift in Sources */,
 				1E30A3B624E2EF370077B33E /* CourseTabItemView.swift in Sources */,
 				1E67895624E52D1A00765CA2 /* DetailViewModel.swift in Sources */,
 				1E30A3AE24E2EB870077B33E /* DiscoverView.swift in Sources */,
+				1E67895C24E7163A00765CA2 /* VPlayerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
