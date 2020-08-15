@@ -16,7 +16,7 @@ struct DetailView: View {
     @State var showControls = false
     @State var timeObserver: Any? = nil
     
-    var viewModel: DetailViewModel
+    private var viewModel: DetailViewModel
     
     init(viewModel: DetailViewModel) {
         self.viewModel = viewModel
@@ -27,6 +27,7 @@ struct DetailView: View {
     @GestureState private var dragOffset = CGSize.zero
     
     var body: some View {
+        
         ScrollView(.vertical, showsIndicators: false) {
             ZStack{
                 VPlayerView(player: $player)

@@ -13,7 +13,11 @@ class DiscoverServiceLocator: BaseServiceLocator {
         return DiscoverViewModel(getCoursesUseCase: root.core.discover.provideGetCoursesUseCase())
     }
     
+    private func provideDiscoverRouter() -> DiscoverRouter {
+        return DiscoverRouter()
+    }
+    
     func provideDiscoverView() -> DiscoverView {
-        return DiscoverView(viewModel: provideDiscoverViewModel())
+        return DiscoverView(viewModel: provideDiscoverViewModel(), router: provideDiscoverRouter())
     }
 }

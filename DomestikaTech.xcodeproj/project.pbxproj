@@ -39,6 +39,8 @@
 		1ED9198124E7E97A00C12860 /* AppCoreServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED9198024E7E97A00C12860 /* AppCoreServiceLocator.swift */; };
 		1ED9198324E7EBC200C12860 /* DiscoverCoreServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED9198224E7EBC200C12860 /* DiscoverCoreServiceLocator.swift */; };
 		1ED9198524E7F56400C12860 /* DetailCoreServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED9198424E7F56400C12860 /* DetailCoreServiceLocator.swift */; };
+		1ED9198724E8008800C12860 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED9198624E8008800C12860 /* Router.swift */; };
+		1ED9198924E80B4100C12860 /* DiscoverRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED9198824E80B4100C12860 /* DiscoverRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +98,8 @@
 		1ED9198024E7E97A00C12860 /* AppCoreServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoreServiceLocator.swift; sourceTree = "<group>"; };
 		1ED9198224E7EBC200C12860 /* DiscoverCoreServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCoreServiceLocator.swift; sourceTree = "<group>"; };
 		1ED9198424E7F56400C12860 /* DetailCoreServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoreServiceLocator.swift; sourceTree = "<group>"; };
+		1ED9198624E8008800C12860 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		1ED9198824E80B4100C12860 /* DiscoverRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +217,7 @@
 				1E67895124E4417C00765CA2 /* Localizable.strings */,
 				1ED9197624E7D29F00C12860 /* AppServiceLocator.swift */,
 				1ED9198024E7E97A00C12860 /* AppCoreServiceLocator.swift */,
+				1ED9198624E8008800C12860 /* Router.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -235,6 +240,7 @@
 				1E30A3B924E2EF850077B33E /* CourseGridItemView.swift */,
 				1E30A3B724E2EF600077B33E /* CourseItemViewModel.swift */,
 				1ED9197A24E7D34200C12860 /* DiscoverServiceLocator.swift */,
+				1ED9198824E80B4100C12860 /* DiscoverRouter.swift */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -436,6 +442,7 @@
 				1E67894824E3DE1400765CA2 /* DetailView.swift in Sources */,
 				1E30A37524E28AB00077B33E /* Course.swift in Sources */,
 				1E30A36F24E286A20077B33E /* DomestikaAPI.swift in Sources */,
+				1ED9198724E8008800C12860 /* Router.swift in Sources */,
 				1E30A33924E27E4C0077B33E /* DomestikaTechApp.swift in Sources */,
 				1E30A37124E287960077B33E /* RestClient.swift in Sources */,
 				1E30A36D24E284FD0077B33E /* Constants.swift in Sources */,
@@ -444,6 +451,7 @@
 				1ED9197924E7D32D00C12860 /* DetailServiceLocator.swift in Sources */,
 				1ED9197D24E7D69200C12860 /* APIServiceLocator.swift in Sources */,
 				1E30A3B424E2EEB20077B33E /* DiscoverViewModel.swift in Sources */,
+				1ED9198924E80B4100C12860 /* DiscoverRouter.swift in Sources */,
 				1ED9196F24E7C1ED00C12860 /* GetPositiveReviewsUseCase.swift in Sources */,
 				1E30A3B624E2EF370077B33E /* CourseTabItemView.swift in Sources */,
 				1E67895624E52D1A00765CA2 /* DetailViewModel.swift in Sources */,

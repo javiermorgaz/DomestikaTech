@@ -11,10 +11,14 @@ import Combine
 
 struct DiscoverView: View {
     
-    @ObservedObject var viewModel: DiscoverViewModel
+    @ObservedObject private var viewModel: DiscoverViewModel
     
-    init(viewModel: DiscoverViewModel) {
+    private var router: DiscoverRouter
+
+    init(viewModel: DiscoverViewModel,
+         router: DiscoverRouter) {
         self.viewModel = viewModel
+        self.router = router
     }
     
     let rows = [GridItem(),]
@@ -74,7 +78,7 @@ extension DiscoverView {
         TabView{
             let tabCourses = viewModel.courseItemsViewModel[0...3]
             ForEach(tabCourses, id: \.id) { model in
-                CourseTabItemView(viewModel: model)
+                CourseTabItemView(viewModel: model, router: router)
             }
         }
         .tabViewStyle(PageTabViewStyle())
@@ -97,7 +101,7 @@ extension DiscoverView {
                 let lastIndex = viewModel.courseItemsViewModel.count - 1
                 let gridCourses = viewModel.courseItemsViewModel[4...lastIndex]
                 ForEach(gridCourses, id: \.id) { model in
-                    NavigationLink(destination: getDetailView(course: model.course)) {
+                    router.navigationView(route: .detailView(course: model.course)) {
                         ZStack {
                             Rectangle()
                                 .fill(Color.white)
