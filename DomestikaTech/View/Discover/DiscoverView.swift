@@ -97,7 +97,7 @@ extension DiscoverView {
                 let lastIndex = viewModel.courseItemsViewModel.count - 1
                 let gridCourses = viewModel.courseItemsViewModel[4...lastIndex]
                 ForEach(gridCourses, id: \.id) { model in
-                    NavigationLink(destination: DetailView(viewModel: DetailViewModel(course: model.course))) {
+                    NavigationLink(destination: getDetailView(course: model.course)) {
                         ZStack {
                             Rectangle()
                                 .fill(Color.white)
@@ -116,5 +116,9 @@ extension DiscoverView {
             .padding(.leading, 20).padding(.trailing, 20)
             .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 50))
         }
+    }
+    
+    private func getDetailView(course: Course) -> DetailView {
+        return AppServiceLocator.shared.detail.provideDetailView(course: course)
     }
 }

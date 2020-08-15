@@ -11,7 +11,7 @@ extension Color {
     static let backgroundColor = Color("background")
     static let advancedcolor = Color("advanced")
     static let beginnerColor = Color("beginner")
-    static let mediumColor = Color("medium")
+    static let intermediateColor = Color("intermediate")
     static let separatorColor = Color("separator")
     static let darkTextColor = Color("darkText")
     static let lightTextColor = Color("lightText")

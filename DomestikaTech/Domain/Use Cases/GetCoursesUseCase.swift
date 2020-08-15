@@ -13,7 +13,7 @@ protocol GetCoursesUseCase {
 }
 
 class GetCourses: GetCoursesUseCase {
-    
+
     private let coursesRepository: CoursesFetchableRepository
     
     init(coursesRepository: CoursesFetchableRepository) {

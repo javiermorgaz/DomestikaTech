@@ -35,8 +35,7 @@ struct DetailView: View {
                         player.play()
                     }
                     .onDisappear() {
-                        player.pause()
-                        player.replaceCurrentItem(with: nil)
+                        stopPlayer()
                     }
                     .onTapGesture {
                         showControls = true
@@ -132,7 +131,9 @@ struct DetailView: View {
         }))
     }
     
-    func removePeriodicTimeObserver() {
+    func stopPlayer() {
+        player.pause()
+        player.replaceCurrentItem(with: nil)
         if let timeObserver = timeObserver {
             player.removeTimeObserver(timeObserver)
             self.timeObserver = nil
@@ -144,9 +145,9 @@ struct PropertiesView: View {
     
     private let icon: String
     private let property: String
-    private let level: String?
+    private let level: (description: String, color: Color)?
     
-    init(icon: String, property: String, level: String? = nil) {
+    init(icon: String, property: String, level: (description: String, color: Color)? = nil) {
         self.icon = icon
         self.property = property
         self.level = level
@@ -161,23 +162,14 @@ struct PropertiesView: View {
                 .font(.caption)
                 .foregroundColor(Color.darkTextColor)
             if let level = level {
-                Text(level)
+                Text(level.description)
                     .font(.caption)
                     .fontWeight(.medium)
                     .foregroundColor(Color.white)
-                    .padding(7)
-                    .background(Color.beginnerColor)
+                    .padding(.top, 3).padding(.bottom, 3).padding(.leading, 6).padding(.trailing, 6)
+                    .background(level.color)
                     .cornerRadius(25)
             }
         })
-    }
-}
-
-struct DetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        
-        let course = Course(courseId: "2", thumbnail: "http://mobile-assets.domestika.org/challenge/404-original.jpg", title: "Content Creation and Editing for Instagram Storie", trailer: "", description: "Discover the secrets of photography and video to find success on Instagram", location: "Sevilla, Spain", teacher: Teacher(name: "Mina Barrio", avatar: "http://mobile-assets.domestika.org/challenge/499833-original.jpg"), reviews: Reviews(positive: 2156, total: 2200), lessonsCount: 22, students: 74685, audio: "Spanish", subtitles: ["English","Spanish","Portuguese"], level: Level.Advanced)
-        
-        DetailView(viewModel: DetailViewModel(course: course))
     }
 }

@@ -32,6 +32,13 @@
 		1E67895A24E7078F00765CA2 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E67895924E7078E00765CA2 /* Double.swift */; };
 		1E67895C24E7163A00765CA2 /* VPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E67895B24E7163A00765CA2 /* VPlayerView.swift */; };
 		1ED9196F24E7C1ED00C12860 /* GetPositiveReviewsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED9196E24E7C1ED00C12860 /* GetPositiveReviewsUseCase.swift */; };
+		1ED9197724E7D29F00C12860 /* AppServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED9197624E7D29F00C12860 /* AppServiceLocator.swift */; };
+		1ED9197924E7D32D00C12860 /* DetailServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED9197824E7D32D00C12860 /* DetailServiceLocator.swift */; };
+		1ED9197B24E7D34200C12860 /* DiscoverServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED9197A24E7D34200C12860 /* DiscoverServiceLocator.swift */; };
+		1ED9197D24E7D69200C12860 /* APIServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED9197C24E7D69200C12860 /* APIServiceLocator.swift */; };
+		1ED9198124E7E97A00C12860 /* AppCoreServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED9198024E7E97A00C12860 /* AppCoreServiceLocator.swift */; };
+		1ED9198324E7EBC200C12860 /* DiscoverCoreServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED9198224E7EBC200C12860 /* DiscoverCoreServiceLocator.swift */; };
+		1ED9198524E7F56400C12860 /* DetailCoreServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED9198424E7F56400C12860 /* DetailCoreServiceLocator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +89,13 @@
 		1E67895924E7078E00765CA2 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		1E67895B24E7163A00765CA2 /* VPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPlayerView.swift; sourceTree = "<group>"; };
 		1ED9196E24E7C1ED00C12860 /* GetPositiveReviewsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPositiveReviewsUseCase.swift; sourceTree = "<group>"; };
+		1ED9197624E7D29F00C12860 /* AppServiceLocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppServiceLocator.swift; sourceTree = "<group>"; };
+		1ED9197824E7D32D00C12860 /* DetailServiceLocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailServiceLocator.swift; sourceTree = "<group>"; };
+		1ED9197A24E7D34200C12860 /* DiscoverServiceLocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverServiceLocator.swift; sourceTree = "<group>"; };
+		1ED9197C24E7D69200C12860 /* APIServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceLocator.swift; sourceTree = "<group>"; };
+		1ED9198024E7E97A00C12860 /* AppCoreServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoreServiceLocator.swift; sourceTree = "<group>"; };
+		1ED9198224E7EBC200C12860 /* DiscoverCoreServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCoreServiceLocator.swift; sourceTree = "<group>"; };
+		1ED9198424E7F56400C12860 /* DetailCoreServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoreServiceLocator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +189,8 @@
 			isa = PBXGroup;
 			children = (
 				1E30A36424E27E830077B33E /* Use Cases */,
+				1ED9198224E7EBC200C12860 /* DiscoverCoreServiceLocator.swift */,
+				1ED9198424E7F56400C12860 /* DetailCoreServiceLocator.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -195,6 +211,8 @@
 				1E30A33824E27E4C0077B33E /* DomestikaTechApp.swift */,
 				1E30A36C24E284FD0077B33E /* Constants.swift */,
 				1E67895124E4417C00765CA2 /* Localizable.strings */,
+				1ED9197624E7D29F00C12860 /* AppServiceLocator.swift */,
+				1ED9198024E7E97A00C12860 /* AppCoreServiceLocator.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -216,6 +234,7 @@
 				1E30A3B524E2EF370077B33E /* CourseTabItemView.swift */,
 				1E30A3B924E2EF850077B33E /* CourseGridItemView.swift */,
 				1E30A3B724E2EF600077B33E /* CourseItemViewModel.swift */,
+				1ED9197A24E7D34200C12860 /* DiscoverServiceLocator.swift */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -226,6 +245,7 @@
 				1E67894724E3DE1400765CA2 /* DetailView.swift */,
 				1E67895524E52D1A00765CA2 /* DetailViewModel.swift */,
 				1E67895B24E7163A00765CA2 /* VPlayerView.swift */,
+				1ED9197824E7D32D00C12860 /* DetailServiceLocator.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -245,6 +265,7 @@
 			children = (
 				1E30A36E24E286A20077B33E /* DomestikaAPI.swift */,
 				1E30A37024E287960077B33E /* RestClient.swift */,
+				1ED9197C24E7D69200C12860 /* APIServiceLocator.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -403,8 +424,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ED9198124E7E97A00C12860 /* AppCoreServiceLocator.swift in Sources */,
+				1ED9198324E7EBC200C12860 /* DiscoverCoreServiceLocator.swift in Sources */,
 				1E30A3B824E2EF600077B33E /* CourseItemViewModel.swift in Sources */,
+				1ED9197724E7D29F00C12860 /* AppServiceLocator.swift in Sources */,
 				1E30A37324E28A8A0077B33E /* CoursesRepository.swift in Sources */,
+				1ED9198524E7F56400C12860 /* DetailCoreServiceLocator.swift in Sources */,
 				1E67895A24E7078F00765CA2 /* Double.swift in Sources */,
 				1E30A3BA24E2EF850077B33E /* CourseGridItemView.swift in Sources */,
 				1E67894F24E43A4F00765CA2 /* Colors.swift in Sources */,
@@ -415,6 +440,9 @@
 				1E30A37124E287960077B33E /* RestClient.swift in Sources */,
 				1E30A36D24E284FD0077B33E /* Constants.swift in Sources */,
 				1E30A3B024E2ECF50077B33E /* GetCoursesUseCase.swift in Sources */,
+				1ED9197B24E7D34200C12860 /* DiscoverServiceLocator.swift in Sources */,
+				1ED9197924E7D32D00C12860 /* DetailServiceLocator.swift in Sources */,
+				1ED9197D24E7D69200C12860 /* APIServiceLocator.swift in Sources */,
 				1E30A3B424E2EEB20077B33E /* DiscoverViewModel.swift in Sources */,
 				1ED9196F24E7C1ED00C12860 /* GetPositiveReviewsUseCase.swift in Sources */,
 				1E30A3B624E2EF370077B33E /* CourseTabItemView.swift in Sources */,
