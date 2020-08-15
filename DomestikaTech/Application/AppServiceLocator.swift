@@ -19,7 +19,7 @@ class AppServiceLocator {
     let detail: DetailServiceLocator
     
     init(core: AppCoreServiceLocator,
-        discover: DiscoverServiceLocator,
+         discover: DiscoverServiceLocator,
          detail: DetailServiceLocator
     ) {
         self.core = core
