@@ -11,7 +11,6 @@ import Combine
 class DiscoverViewModel: ObservableObject {
     
     @Published var courseItemsViewModel =  [CourseItemViewModel]()
-    @Published var isLoaded = false
     
     private let getCoursesUseCase: GetCoursesUseCase
     private var cancellable = Set<AnyCancellable>()

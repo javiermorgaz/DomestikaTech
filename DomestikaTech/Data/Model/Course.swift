@@ -7,6 +7,12 @@
 
 import Foundation
 
+enum Level: String, Decodable {
+    case Beginner
+    case Intermediate
+    case Advanced
+}
+
 struct Course: Decodable, Hashable {
     let courseId: String
     let thumbnail: String
@@ -20,7 +26,7 @@ struct Course: Decodable, Hashable {
     let students: Int
     let audio: String
     let subtitles: [String]
-    let level: String
+    let level: Level
     
     enum CodingKeys: String, CodingKey {
         case courseId = "id"

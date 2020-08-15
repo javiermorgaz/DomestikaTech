@@ -29,7 +29,7 @@ struct DiscoverView: View {
                         VStack(alignment: .leading, spacing: 0, content: {
                             coursesGridHeaderView
                             coursesGridView
-                            Spacer(minLength: 40)
+                            Spacer(minLength: 20)
                         })
                     } else {
                         discoverEmptyView
@@ -39,19 +39,25 @@ struct DiscoverView: View {
             })
             .edgesIgnoringSafeArea(.top)
             .navigationBarItems(leading:
+                                Button(action: {
+                                    print("Domestika button was tapped")
+                                }) {
                                     Image("Brand")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 38, height: 38),
+                                        .renderingMode(.original)
+                                        .frame(width: 30, height: 30)
+                                        .padding(.leading, 4).padding(.bottom, 5)
+                                }
+                                .buttonStyle(PlainButtonStyle()),
                                 trailing:
                                     Button(action: {
                                         print("Search button was tapped")
                                     }) {
                                         Image("Search")
                                             .renderingMode(.original)
+                                            .frame(width: 30, height: 30)
+                                            .padding(.trailing, 4).padding(.bottom, 5)
                                     }
                                     .buttonStyle(PlainButtonStyle())
-                                    .frame(width: 38, height: 38)
             )
         }
     }
@@ -79,6 +85,7 @@ extension DiscoverView {
     var coursesGridHeaderView: some View {
         Text(LocalizedStringKey("popular"))
             .font(.body)
+            .foregroundColor(Color.darkTextColor)
             .fontWeight(.medium)
             .padding(.bottom, 20).padding(.leading, 20)
             .frame(width: .none, height: 80, alignment: .bottom)
@@ -90,14 +97,13 @@ extension DiscoverView {
                 let lastIndex = viewModel.courseItemsViewModel.count - 1
                 let gridCourses = viewModel.courseItemsViewModel[4...lastIndex]
                 ForEach(gridCourses, id: \.id) { model in
-                    NavigationLink(destination: DetailView()) {
+                    NavigationLink(destination: DetailView(viewModel: DetailViewModel(course: model.course))) {
                         ZStack {
                             Rectangle()
                                 .fill(Color.white)
                             CourseGridItemView(viewModel: model)
                                 .frame(width: 265)
                         }
-                        
                     }
                     .buttonStyle(PlainButtonStyle())
                 }
@@ -107,7 +113,7 @@ extension DiscoverView {
                 .padding(.bottom, 30)
                 .shadow(color: Color.gray.opacity(0.1), radius: 20, x: 0, y: 0)
             }
-            .padding(.leading, 20)
+            .padding(.leading, 20).padding(.trailing, 20)
             .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 50))
         }
     }

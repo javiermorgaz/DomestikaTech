@@ -38,9 +38,11 @@ struct CourseTabItemView: View {
                         .foregroundColor(Color.backgroundColor)
                         .lineLimit(2)
                         .multilineTextAlignment(.center)
-                    NavigationLink(destination: DetailView()) {
+                        .fixedSize(horizontal: false, vertical: true)
+                    NavigationLink(destination: DetailView(viewModel: DetailViewModel(course: viewModel.course))) {
                         Text(LocalizedStringKey("watch"))
                             .font(.callout)
+                            .foregroundColor(Color.darkTextColor)
                             .fontWeight(.medium)
                     }
                     .buttonStyle(PlainButtonStyle())
