@@ -8,13 +8,13 @@
 import Foundation
 
 protocol GetPositiveReviewsUseCase {
-    func exec(positive: Int, total: Int) -> Double
+    func exec(positive: Int, total: Int) -> Int
 }
 
-class GetPositiveReviews : GetPositiveReviewsUseCase {
+class GetPositiveReviews: GetPositiveReviewsUseCase {
 
-    func exec(positive: Int, total: Int) -> Double {
+    func exec(positive: Int, total: Int) -> Int {
         let percentage = Double(positive) / Double(total) * 100
-        return round(percentage * 10) / 10
+        return Int(percentage)
     }
 }

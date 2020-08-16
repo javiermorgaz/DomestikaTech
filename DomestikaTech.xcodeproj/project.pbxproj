@@ -7,11 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E1EF96224E92A3400E737C6 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1EF96124E92A3400E737C6 /* Utils.swift */; };
+		1E1EF96624E936B900E737C6 /* home.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E1EF96524E936B900E737C6 /* home.json */; };
+		1E1EF96F24E9623700E737C6 /* home_bad_structure.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E1EF96E24E9623700E737C6 /* home_bad_structure.json */; };
+		1E1EF97124E9744700E737C6 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1EF97024E9744700E737C6 /* MockData.swift */; };
+		1E1EF97324E9756500E737C6 /* home.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E1EF97224E9756500E737C6 /* home.json */; };
+		1E1EF97624E996C100E737C6 /* DetailUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1EF97524E996C100E737C6 /* DetailUITests.swift */; };
+		1E1EF97824E997ED00E737C6 /* GetPositiveReviewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1EF97724E997ED00E737C6 /* GetPositiveReviewsTests.swift */; };
+		1E1EF97A24E99D1700E737C6 /* UtilsUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1EF97924E99D1700E737C6 /* UtilsUITest.swift */; };
 		1E30A33924E27E4C0077B33E /* DomestikaTechApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E30A33824E27E4C0077B33E /* DomestikaTechApp.swift */; };
 		1E30A33D24E27E4E0077B33E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E30A33C24E27E4E0077B33E /* Assets.xcassets */; };
 		1E30A34024E27E4E0077B33E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E30A33F24E27E4E0077B33E /* Preview Assets.xcassets */; };
-		1E30A34B24E27E4E0077B33E /* DomestikaTechTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E30A34A24E27E4E0077B33E /* DomestikaTechTests.swift */; };
-		1E30A35624E27E4F0077B33E /* DomestikaTechUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E30A35524E27E4F0077B33E /* DomestikaTechUITests.swift */; };
+		1E30A34B24E27E4E0077B33E /* GetCoursesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E30A34A24E27E4E0077B33E /* GetCoursesTests.swift */; };
+		1E30A35624E27E4F0077B33E /* DiscoverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E30A35524E27E4F0077B33E /* DiscoverUITests.swift */; };
 		1E30A36D24E284FD0077B33E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E30A36C24E284FD0077B33E /* Constants.swift */; };
 		1E30A36F24E286A20077B33E /* DomestikaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E30A36E24E286A20077B33E /* DomestikaAPI.swift */; };
 		1E30A37124E287960077B33E /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E30A37024E287960077B33E /* RestClient.swift */; };
@@ -68,16 +76,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E1EF96124E92A3400E737C6 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		1E1EF96524E936B900E737C6 /* home.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = home.json; sourceTree = "<group>"; };
+		1E1EF96E24E9623700E737C6 /* home_bad_structure.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = home_bad_structure.json; sourceTree = "<group>"; };
+		1E1EF97024E9744700E737C6 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		1E1EF97224E9756500E737C6 /* home.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = home.json; sourceTree = "<group>"; };
+		1E1EF97524E996C100E737C6 /* DetailUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUITests.swift; sourceTree = "<group>"; };
+		1E1EF97724E997ED00E737C6 /* GetPositiveReviewsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPositiveReviewsTests.swift; sourceTree = "<group>"; };
+		1E1EF97924E99D1700E737C6 /* UtilsUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilsUITest.swift; sourceTree = "<group>"; };
 		1E30A33524E27E4C0077B33E /* DomestikaTech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DomestikaTech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E30A33824E27E4C0077B33E /* DomestikaTechApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomestikaTechApp.swift; sourceTree = "<group>"; };
 		1E30A33C24E27E4E0077B33E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E30A33F24E27E4E0077B33E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1E30A34124E27E4E0077B33E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E30A34624E27E4E0077B33E /* DomestikaTechTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomestikaTechTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1E30A34A24E27E4E0077B33E /* DomestikaTechTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomestikaTechTests.swift; sourceTree = "<group>"; };
+		1E30A34A24E27E4E0077B33E /* GetCoursesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCoursesTests.swift; sourceTree = "<group>"; };
 		1E30A34C24E27E4E0077B33E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E30A35124E27E4F0077B33E /* DomestikaTechUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomestikaTechUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1E30A35524E27E4F0077B33E /* DomestikaTechUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomestikaTechUITests.swift; sourceTree = "<group>"; };
+		1E30A35524E27E4F0077B33E /* DiscoverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverUITests.swift; sourceTree = "<group>"; };
 		1E30A35724E27E4F0077B33E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E30A36C24E284FD0077B33E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1E30A36E24E286A20077B33E /* DomestikaAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomestikaAPI.swift; sourceTree = "<group>"; };
@@ -161,6 +177,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1E1EF96724E93BDE00E737C6 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				1E1EF96524E936B900E737C6 /* home.json */,
+				1E1EF96E24E9623700E737C6 /* home_bad_structure.json */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		1E1EF97424E976DA00E737C6 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				1E1EF97024E9744700E737C6 /* MockData.swift */,
+				1E1EF97224E9756500E737C6 /* home.json */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		1E30A32C24E27E4C0077B33E = {
 			isa = PBXGroup;
 			children = (
@@ -208,8 +242,11 @@
 		1E30A34924E27E4E0077B33E /* DomestikaTechTests */ = {
 			isa = PBXGroup;
 			children = (
-				1E30A34A24E27E4E0077B33E /* DomestikaTechTests.swift */,
+				1E1EF96724E93BDE00E737C6 /* Mocks */,
+				1E30A34A24E27E4E0077B33E /* GetCoursesTests.swift */,
+				1E1EF97724E997ED00E737C6 /* GetPositiveReviewsTests.swift */,
 				1E30A34C24E27E4E0077B33E /* Info.plist */,
+				1E1EF96124E92A3400E737C6 /* Utils.swift */,
 			);
 			path = DomestikaTechTests;
 			sourceTree = "<group>";
@@ -217,8 +254,10 @@
 		1E30A35424E27E4F0077B33E /* DomestikaTechUITests */ = {
 			isa = PBXGroup;
 			children = (
-				1E30A35524E27E4F0077B33E /* DomestikaTechUITests.swift */,
+				1E30A35524E27E4F0077B33E /* DiscoverUITests.swift */,
+				1E1EF97524E996C100E737C6 /* DetailUITests.swift */,
 				1E30A35724E27E4F0077B33E /* Info.plist */,
+				1E1EF97924E99D1700E737C6 /* UtilsUITest.swift */,
 			);
 			path = DomestikaTechUITests;
 			sourceTree = "<group>";
@@ -245,6 +284,7 @@
 		1E30A36524E27EA10077B33E /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				1E1EF97424E976DA00E737C6 /* Mock */,
 				1E67895024E43BD100765CA2 /* Extensions */,
 				1E30A33824E27E4C0077B33E /* DomestikaTechApp.swift */,
 				1E30A36C24E284FD0077B33E /* Constants.swift */,
@@ -393,6 +433,7 @@
 				1E30A34224E27E4E0077B33E /* Sources */,
 				1E30A34324E27E4E0077B33E /* Frameworks */,
 				1E30A34424E27E4E0077B33E /* Resources */,
+				1A93F12E2CE6A29FCA860929 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -475,6 +516,7 @@
 				1E67895224E4417C00765CA2 /* Localizable.strings in Resources */,
 				1E30A34024E27E4E0077B33E /* Preview Assets.xcassets in Resources */,
 				1ED9198B24E823E900C12860 /* Launch Screen.storyboard in Resources */,
+				1E1EF97324E9756500E737C6 /* home.json in Resources */,
 				1E30A33D24E27E4E0077B33E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,6 +525,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E1EF96F24E9623700E737C6 /* home_bad_structure.json in Resources */,
+				1E1EF96624E936B900E737C6 /* home.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +540,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1A93F12E2CE6A29FCA860929 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DomestikaTechTests/Pods-DomestikaTechTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DomestikaTechTests/Pods-DomestikaTechTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DomestikaTechTests/Pods-DomestikaTechTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		1E1EF96024E9239500E737C6 /* SwftLint Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -634,6 +695,7 @@
 				1E67894824E3DE1400765CA2 /* DetailView.swift in Sources */,
 				1E30A37524E28AB00077B33E /* Course.swift in Sources */,
 				1E30A36F24E286A20077B33E /* DomestikaAPI.swift in Sources */,
+				1E1EF97124E9744700E737C6 /* MockData.swift in Sources */,
 				1ED9198724E8008800C12860 /* Router.swift in Sources */,
 				1E30A33924E27E4C0077B33E /* DomestikaTechApp.swift in Sources */,
 				1E30A37124E287960077B33E /* RestClient.swift in Sources */,
@@ -659,7 +721,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E30A34B24E27E4E0077B33E /* DomestikaTechTests.swift in Sources */,
+				1E1EF97824E997ED00E737C6 /* GetPositiveReviewsTests.swift in Sources */,
+				1E30A34B24E27E4E0077B33E /* GetCoursesTests.swift in Sources */,
+				1E1EF96224E92A3400E737C6 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -667,7 +731,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E30A35624E27E4F0077B33E /* DomestikaTechUITests.swift in Sources */,
+				1E1EF97624E996C100E737C6 /* DetailUITests.swift in Sources */,
+				1E30A35624E27E4F0077B33E /* DiscoverUITests.swift in Sources */,
+				1E1EF97A24E99D1700E737C6 /* UtilsUITest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

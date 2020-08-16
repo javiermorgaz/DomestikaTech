@@ -24,4 +24,3 @@ class GetCourses: GetCoursesUseCase {
         coursesRepository.fetchCourseList()
     }
 }
-

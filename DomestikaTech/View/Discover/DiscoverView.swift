@@ -49,7 +49,7 @@ struct DiscoverView: View {
 extension DiscoverView {
     
     var DiscoverEmptyView: some View {
-        HStack{
+        HStack {
             Spacer()
             ProgressView()
                 .progressViewStyle(CircularProgressViewStyle(tint: Color.darkTextColor))
@@ -57,9 +57,9 @@ extension DiscoverView {
             Spacer()
         }
     }
-    
+
     var CoursesTabView: some View {
-        TabView{
+        TabView {
             let tabCourses = viewModel.courseItemsViewModel[0...3]
             ForEach(tabCourses, id: \.id) { model in
                 CourseTabItemView(viewModel: model, router: router)
@@ -68,6 +68,7 @@ extension DiscoverView {
         .tabViewStyle(PageTabViewStyle())
         .frame(width: .none, height: 440)
         .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .automatic))
+        .accessibility(identifier: "TabViewScroll")
     }
     
     var CoursesGridHeaderView: some View {
@@ -95,6 +96,7 @@ extension DiscoverView {
                         }
                     }
                     .buttonStyle(PlainButtonStyle())
+                    .accessibility(identifier: "Course\(model.id)")
                 }
                 .background(Color.backgroundColor)
                 .cornerRadius(5)
@@ -105,6 +107,7 @@ extension DiscoverView {
             .padding(.leading, 20).padding(.trailing, 20)
             .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 50))
         }
+        .accessibility(identifier: "GridScroll")
     }
     
     var BrandButton: some View {
