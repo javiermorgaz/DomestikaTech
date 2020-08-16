@@ -27,15 +27,15 @@ struct DiscoverView: View {
         NavigationView {
             ScrollView(.vertical, showsIndicators: false, content: {
                 VStack(alignment: .center, spacing: 0, content: {
-                    if !viewModel.courseItemsViewModel.isEmpty {
+                    if viewModel.courseItemsViewModel.isEmpty {
+                        DiscoverEmptyView
+                    } else {
                         CoursesTabView
                         VStack(alignment: .leading, spacing: 0, content: {
                             CoursesGridHeaderView
                             CoursesGridView
                             Spacer(minLength: 20)
                         })
-                    } else {
-                        DiscoverEmptyView
                     }
                 })
                 .onAppear(perform: viewModel.getCourses)
@@ -49,8 +49,13 @@ struct DiscoverView: View {
 extension DiscoverView {
     
     var DiscoverEmptyView: some View {
-        AnyView(ProgressView())
-            .frame(width: .none, height: .none, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+        HStack{
+            Spacer()
+            ProgressView()
+                .progressViewStyle(CircularProgressViewStyle(tint: Color.darkTextColor))
+                .padding(.top, 400)
+            Spacer()
+        }
     }
     
     var CoursesTabView: some View {
