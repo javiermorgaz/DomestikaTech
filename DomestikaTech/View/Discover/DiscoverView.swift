@@ -21,60 +21,44 @@ struct DiscoverView: View {
         self.router = router
     }
     
-    let rows = [GridItem(),]
+    private let rows = [GridItem()]
     
     var body: some View {
         NavigationView {
             ScrollView(.vertical, showsIndicators: false, content: {
                 VStack(alignment: .center, spacing: 0, content: {
-                    if !viewModel.courseItemsViewModel.isEmpty {
-                        coursesTabView
-                        
+                    if viewModel.courseItemsViewModel.isEmpty {
+                        DiscoverEmptyView
+                    } else {
+                        CoursesTabView
                         VStack(alignment: .leading, spacing: 0, content: {
-                            coursesGridHeaderView
-                            coursesGridView
+                            CoursesGridHeaderView
+                            CoursesGridView
                             Spacer(minLength: 20)
                         })
-                    } else {
-                        discoverEmptyView
                     }
                 })
                 .onAppear(perform: viewModel.getCourses)
             })
             .edgesIgnoringSafeArea(.top)
-            .navigationBarItems(leading:
-                                Button(action: {
-                                    print("Domestika button was tapped")
-                                }) {
-                                    Image("Brand")
-                                        .renderingMode(.original)
-                                        .frame(width: 30, height: 30)
-                                        .padding(.leading, 4).padding(.bottom, 5)
-                                }
-                                .buttonStyle(PlainButtonStyle()),
-                                trailing:
-                                    Button(action: {
-                                        print("Search button was tapped")
-                                    }) {
-                                        Image("Search")
-                                            .renderingMode(.original)
-                                            .frame(width: 30, height: 30)
-                                            .padding(.trailing, 4).padding(.bottom, 5)
-                                    }
-                                    .buttonStyle(PlainButtonStyle())
-            )
+            .navigationBarItems(leading: BrandButton, trailing: SearchButton)
         }
     }
 }
 
 extension DiscoverView {
     
-    var discoverEmptyView: some View {
-        AnyView(ProgressView())
-            .frame(width: .none, height: .none, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+    var DiscoverEmptyView: some View {
+        HStack{
+            Spacer()
+            ProgressView()
+                .progressViewStyle(CircularProgressViewStyle(tint: Color.darkTextColor))
+                .padding(.top, 400)
+            Spacer()
+        }
     }
     
-    var coursesTabView: some View {
+    var CoursesTabView: some View {
         TabView{
             let tabCourses = viewModel.courseItemsViewModel[0...3]
             ForEach(tabCourses, id: \.id) { model in
@@ -86,7 +70,7 @@ extension DiscoverView {
         .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .automatic))
     }
     
-    var coursesGridHeaderView: some View {
+    var CoursesGridHeaderView: some View {
         Text(LocalizedStringKey("popular"))
             .font(.body)
             .foregroundColor(Color.darkTextColor)
@@ -95,11 +79,12 @@ extension DiscoverView {
             .frame(width: .none, height: 80, alignment: .bottom)
     }
     
-    var coursesGridView: some View {
+    var CoursesGridView: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHGrid(rows: rows, spacing: 20) {
                 let lastIndex = viewModel.courseItemsViewModel.count - 1
                 let gridCourses = viewModel.courseItemsViewModel[4...lastIndex]
+                
                 ForEach(gridCourses, id: \.id) { model in
                     router.navigationView(route: .detailView(course: model.course)) {
                         ZStack {
@@ -120,6 +105,30 @@ extension DiscoverView {
             .padding(.leading, 20).padding(.trailing, 20)
             .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 50))
         }
+    }
+    
+    var BrandButton: some View {
+        Button(action: {
+            print("Domestika button was tapped")
+        }) {
+            Image("Brand")
+                .renderingMode(.original)
+                .frame(width: 30, height: 30)
+                .padding(.leading, 4).padding(.bottom, 5)
+        }
+        .buttonStyle(PlainButtonStyle())
+    }
+    
+    var SearchButton: some View {
+        Button(action: {
+            print("Search button was tapped")
+        }) {
+            Image("Search")
+                .renderingMode(.original)
+                .frame(width: 30, height: 30)
+                .padding(.trailing, 4).padding(.bottom, 5)
+        }
+        .buttonStyle(PlainButtonStyle())
     }
     
     private func getDetailView(course: Course) -> DetailView {

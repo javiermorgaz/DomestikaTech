@@ -14,6 +14,7 @@ class DiscoverViewModel: ObservableObject {
     
     private let getCoursesUseCase: GetCoursesUseCase
     private var cancellable = Set<AnyCancellable>()
+    private let minItems = 4
     
     init(getCoursesUseCase: GetCoursesUseCase) {
         self.getCoursesUseCase = getCoursesUseCase
@@ -32,7 +33,9 @@ class DiscoverViewModel: ObservableObject {
                     self.courseItemsViewModel = []
                 }
             }, receiveValue: { courses in
-                self.courseItemsViewModel = courses
+                if courses.count > self.minItems {
+                    self.courseItemsViewModel = courses
+                }
             })
             .store(in: &cancellable)
     }

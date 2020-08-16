@@ -19,54 +19,75 @@ struct CourseGridItemView: View {
     var body: some View {
         
         VStack(alignment: .leading, spacing: 0, content: {
-            WebImage(url: viewModel.image)
-                .renderingMode(.original)
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(height: 150)
-                .clipped()
-            
+            CourseImage
             VStack(alignment: .leading, spacing: 0, content: {
                 Spacer().frame(height: 20)
-                Text(viewModel.title)
-                    .font(.subheadline)
-                    .foregroundColor(Color.darkTextColor)
-                    .fontWeight(.medium)
-                    .lineLimit(2)
-                    .multilineTextAlignment(.leading)
-                    .padding(.leading, 20).padding(.trailing, 20)
-                    .fixedSize(horizontal: false, vertical: true)
+                Title
                 Spacer().frame(height: 8)
-                Text(viewModel.teacherName)
-                    .font(.caption)
-                    .foregroundColor(Color.lightTextColor)
-                    .lineLimit(2)
-                    .multilineTextAlignment(.leading)
-                    .padding(.leading, 20).padding(.trailing, 20)
-                    .fixedSize(horizontal: false, vertical: true)
-                
+                Teacher
                 Spacer(minLength: 20)
             })
             .frame(height: 90)
             
             Rectangle().fill(Color.separatorColor)
                 .frame(height: 1)
-            
             HStack {
-                Text(LocalizedStringKey("verCurso"))
-                    .font(.caption)
-                    .foregroundColor(Color.darkTextColor)
-                    .lineLimit(2)
-                    .padding(.leading, 20)
-                    .fixedSize(horizontal: false, vertical: true)
+                CourseButton
                 Spacer()
-                Image("main-disclosure")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 12, height: 12)
-                    .padding(.trailing)
+                DisclosureImage
             }
             .frame(height: 45)
         })
+        .background(Color.backgroundColor)
+    }
+}
+
+extension CourseGridItemView {
+    
+    var CourseImage: some View {
+        WebImage(url: viewModel.image)
+            .renderingMode(.original)
+            .resizable()
+            .aspectRatio(contentMode: .fill)
+            .frame(height: 150)
+            .clipped()
+    }
+    
+    var Title: some View {
+        Text(viewModel.title)
+            .font(.subheadline)
+            .foregroundColor(Color.darkTextColor)
+            .fontWeight(.medium)
+            .lineLimit(2)
+            .multilineTextAlignment(.leading)
+            .padding(.leading, 20).padding(.trailing, 20)
+            .fixedSize(horizontal: false, vertical: true)
+    }
+    
+    var Teacher: some View {
+        Text(viewModel.teacherName)
+            .font(.caption)
+            .foregroundColor(Color.lightTextColor)
+            .lineLimit(2)
+            .multilineTextAlignment(.leading)
+            .padding(.leading, 20).padding(.trailing, 20)
+            .fixedSize(horizontal: false, vertical: true)
+    }
+    
+    var CourseButton: some View {
+        Text(LocalizedStringKey("verCurso"))
+            .font(.caption)
+            .foregroundColor(Color.darkTextColor)
+            .lineLimit(2)
+            .padding(.leading, 20)
+            .fixedSize(horizontal: false, vertical: true)
+    }
+    
+    var DisclosureImage: some View {
+        Image("main-disclosure")
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(width: 12, height: 12)
+            .padding(.trailing)
     }
 }
