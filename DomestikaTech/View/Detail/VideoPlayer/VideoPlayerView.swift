@@ -10,45 +10,19 @@ import AVKit
 
 struct VideoPlayerView: View {
     
-    @State var player = AVPlayer()
-    @State var isplaying = true
-    @State var showControls = false
-    @State var timeObserver: Any? = nil
-    
+    @State var player: AVPlayer = AVPlayer()
     private var url: URL
+    private let overlayImage: URL
     
-    init(url: URL) {
+    init(url: URL, overlayImage: URL) {
         self.url = url
+        self.overlayImage = overlayImage
         player.replaceCurrentItem(with: AVPlayerItem(url: url))
-    }
+    } 
     
     var body: some View {
-        
-        ZStack{
-            VideoPlayerViewController(player: $player)
-                .frame(height: 210)
-                .onAppear {
-                    player.play()
-                }
-                .onDisappear() {
-                    stopPlayer()
-                }
-                .onTapGesture {
-                    showControls = true
-                }
-            
-            if showControls {
-                VideoPlayerControlsView(player: $player, isplaying: $isplaying, showControls: $showControls, timeObserver: $timeObserver)
-            }
-        }
-    }
-    
-    private func stopPlayer() {
-        player.pause()
-        player.replaceCurrentItem(with: nil)
-        if let timeObserver = timeObserver {
-            player.removeTimeObserver(timeObserver)
-            self.timeObserver = nil
-        }
+        VideoPlayerObservableView(player: $player,
+                                  overlayImage: overlayImage,
+                                  readyObserver: VideoPlayerObserver(player: player))
     }
 }

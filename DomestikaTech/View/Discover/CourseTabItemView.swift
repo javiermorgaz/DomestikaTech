@@ -56,7 +56,7 @@ extension CourseTabItemView {
         Text(viewModel.title)
             .font(.title2)
             .fontWeight(.medium)
-            .foregroundColor(Color.backgroundColor)
+            .foregroundColor(Color.white)
             .lineLimit(2)
             .multilineTextAlignment(.center)
             .fixedSize(horizontal: false, vertical: true)
@@ -66,13 +66,12 @@ extension CourseTabItemView {
         router.navigationView(route: .detailView(course: viewModel.course)) {
             Text(LocalizedStringKey("watch"))
                 .font(.callout)
-                .foregroundColor(Color.darkTextColor)
+                .foregroundColor(Color.black)
                 .fontWeight(.medium)
         }
         .buttonStyle(PlainButtonStyle())
         .frame(width: 110, height: 35)
-        .foregroundColor(Color.darkTextColor)
-        .background(Color.backgroundColor)
+        .background(Color.white)
         .cornerRadius(3)
     }
     

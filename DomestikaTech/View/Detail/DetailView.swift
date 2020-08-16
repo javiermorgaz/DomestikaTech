@@ -23,7 +23,7 @@ struct DetailView: View {
     var body: some View {
         
         ScrollView(.vertical, showsIndicators: false) {
-            VideoPlayerView(url: viewModel.trailer)
+            VideoPlayerView(url: viewModel.trailer, overlayImage: viewModel.image)
             
             VStack(alignment: .leading) {
                 VStack(alignment: .leading, spacing: 6, content: {
@@ -123,7 +123,7 @@ extension DetailView {
             self.presentationMode.wrappedValue.dismiss()
         }) {
             Image("Back")
-                .renderingMode(.original)
+                .renderingMode(.template)
         }
         .buttonStyle(PlainButtonStyle())
         .frame(width: 30, height: 30)
@@ -134,7 +134,7 @@ extension DetailView {
             print("Share button was tapped")
         }) {
             Image("Share")
-                .renderingMode(.original)
+                .renderingMode(.template)
         }
         .buttonStyle(PlainButtonStyle())
         .frame(width: 30, height: 30)

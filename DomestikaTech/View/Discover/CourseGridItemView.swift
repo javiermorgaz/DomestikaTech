@@ -38,6 +38,7 @@ struct CourseGridItemView: View {
             }
             .frame(height: 45)
         })
+        .background(Color.backgroundColor)
     }
 }
 
