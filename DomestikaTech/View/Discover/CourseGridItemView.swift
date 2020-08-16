@@ -9,15 +9,15 @@ import SwiftUI
 import SDWebImageSwiftUI
 
 struct CourseGridItemView: View {
-    
+
     @ObservedObject var viewModel: CourseItemViewModel
-    
+
     init(viewModel: CourseItemViewModel) {
         self.viewModel = viewModel
     }
-    
+
     var body: some View {
-        
+
         VStack(alignment: .leading, spacing: 0, content: {
             CourseImage
             VStack(alignment: .leading, spacing: 0, content: {
@@ -28,7 +28,7 @@ struct CourseGridItemView: View {
                 Spacer(minLength: 20)
             })
             .frame(height: 90)
-            
+
             Rectangle().fill(Color.separatorColor)
                 .frame(height: 1)
             HStack {
@@ -43,7 +43,7 @@ struct CourseGridItemView: View {
 }
 
 extension CourseGridItemView {
-    
+
     var CourseImage: some View {
         WebImage(url: viewModel.image)
             .renderingMode(.original)
@@ -52,7 +52,7 @@ extension CourseGridItemView {
             .frame(height: 150)
             .clipped()
     }
-    
+
     var Title: some View {
         Text(viewModel.title)
             .font(.subheadline)
@@ -63,7 +63,7 @@ extension CourseGridItemView {
             .padding(.leading, 20).padding(.trailing, 20)
             .fixedSize(horizontal: false, vertical: true)
     }
-    
+
     var Teacher: some View {
         Text(viewModel.teacherName)
             .font(.caption)
@@ -73,7 +73,7 @@ extension CourseGridItemView {
             .padding(.leading, 20).padding(.trailing, 20)
             .fixedSize(horizontal: false, vertical: true)
     }
-    
+
     var CourseButton: some View {
         Text(LocalizedStringKey("verCurso"))
             .font(.caption)
@@ -82,7 +82,7 @@ extension CourseGridItemView {
             .padding(.leading, 20)
             .fixedSize(horizontal: false, vertical: true)
     }
-    
+
     var DisclosureImage: some View {
         Image("main-disclosure")
             .resizable()

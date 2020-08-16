@@ -8,17 +8,17 @@
 import SwiftUI
 import AVKit
 
-struct VideoPlayerViewController : UIViewControllerRepresentable {
-    @Binding var player : AVPlayer
-    
+struct VideoPlayerViewController: UIViewControllerRepresentable {
+    @Binding var player: AVPlayer
+
     func makeUIViewController(context: UIViewControllerRepresentableContext<VideoPlayerViewController>) -> AVPlayerViewController {
-        
+
         let controller = AVPlayerViewController()
         controller.player = player
         controller.showsPlaybackControls = false
         controller.videoGravity = .resizeAspectFill
         return controller
     }
-    
+
     func updateUIViewController(_ uiViewController: AVPlayerViewController, context: UIViewControllerRepresentableContext<VideoPlayerViewController>) {}
 }

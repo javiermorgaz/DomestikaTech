@@ -14,7 +14,7 @@ protocol CoursesFetchableRepository {
 
 class CoursesFetcherRepository {
     let restClient: RestClient
-    
+
     init(restClient: RestClient) {
         self.restClient = restClient
     }

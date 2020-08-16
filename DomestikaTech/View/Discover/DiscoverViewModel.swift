@@ -9,19 +9,19 @@ import Foundation
 import Combine
 
 class DiscoverViewModel: ObservableObject {
-    
+
     @Published var courseItemsViewModel =  [CourseItemViewModel]()
-    
+
     private let getCoursesUseCase: GetCoursesUseCase
     private var cancellable = Set<AnyCancellable>()
     private let minItems = 4
-    
+
     init(getCoursesUseCase: GetCoursesUseCase) {
         self.getCoursesUseCase = getCoursesUseCase
     }
-        
+
     func getCourses() {
-        
+
         getCoursesUseCase.exec()
             .receive(on: DispatchQueue.main)
             .map { courses in courses.map { CourseItemViewModel(course: $0) }}

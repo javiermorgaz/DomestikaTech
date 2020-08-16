@@ -10,9 +10,9 @@ import AVKit
 import Combine
 
 struct DiscoverView: View {
-    
+
     @ObservedObject private var viewModel: DiscoverViewModel
-    
+
     private var router: DiscoverRouter
 
     init(viewModel: DiscoverViewModel,
@@ -20,9 +20,9 @@ struct DiscoverView: View {
         self.viewModel = viewModel
         self.router = router
     }
-    
+
     private let rows = [GridItem()]
-    
+
     var body: some View {
         NavigationView {
             ScrollView(.vertical, showsIndicators: false, content: {
@@ -47,7 +47,7 @@ struct DiscoverView: View {
 }
 
 extension DiscoverView {
-    
+
     var DiscoverEmptyView: some View {
         HStack {
             Spacer()
@@ -70,7 +70,7 @@ extension DiscoverView {
         .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .automatic))
         .accessibility(identifier: "TabViewScroll")
     }
-    
+
     var CoursesGridHeaderView: some View {
         Text(LocalizedStringKey("popular"))
             .font(.body)
@@ -79,13 +79,13 @@ extension DiscoverView {
             .padding(.bottom, 20).padding(.leading, 20)
             .frame(width: .none, height: 80, alignment: .bottom)
     }
-    
+
     var CoursesGridView: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHGrid(rows: rows, spacing: 20) {
                 let lastIndex = viewModel.courseItemsViewModel.count - 1
                 let gridCourses = viewModel.courseItemsViewModel[4...lastIndex]
-                
+
                 ForEach(gridCourses, id: \.id) { model in
                     router.navigationView(route: .detailView(course: model.course)) {
                         ZStack {
@@ -109,31 +109,31 @@ extension DiscoverView {
         }
         .accessibility(identifier: "GridScroll")
     }
-    
+
     var BrandButton: some View {
         Button(action: {
             print("Domestika button was tapped")
-        }) {
+        }, label: {
             Image("Brand")
                 .renderingMode(.original)
                 .frame(width: 30, height: 30)
                 .padding(.leading, 4).padding(.bottom, 5)
-        }
+        })
         .buttonStyle(PlainButtonStyle())
     }
-    
+
     var SearchButton: some View {
         Button(action: {
             print("Search button was tapped")
-        }) {
+        }, label: {
             Image("Search")
                 .renderingMode(.original)
                 .frame(width: 30, height: 30)
                 .padding(.trailing, 4).padding(.bottom, 5)
-        }
+        })
         .buttonStyle(PlainButtonStyle())
     }
-    
+
     private func getDetailView(course: Course) -> DetailView {
         return AppServiceLocator.shared.detail.provideDetailView(course: course)
     }

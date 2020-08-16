@@ -9,7 +9,7 @@ import Foundation
 
 extension Double {
     var toTime: String {
-        
+
         let value = Int(self)
         let hours: Int = Int(value / 3600)
         let minutes: Int = Int(value % 3600 / 60)

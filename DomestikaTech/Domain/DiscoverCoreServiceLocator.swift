@@ -8,11 +8,11 @@
 import Foundation
 
 class DiscoverCoreServiceLocator: BaseCoreServiceLocator {
-    
+
     func provideCoursesRepository() -> CoursesFetchableRepository {
         return CoursesFetcherRepository(restClient: root.api.provideRestClient(baseURL: Constants.baseURL))
     }
-    
+
     func provideGetCoursesUseCase() -> GetCourses {
         return GetCourses(coursesRepository: provideCoursesRepository())
     }

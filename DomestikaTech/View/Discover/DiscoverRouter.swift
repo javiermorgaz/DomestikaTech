@@ -13,8 +13,8 @@ enum DiscoverRoute {
 
 struct DiscoverRouter: Router {
     typealias Route = DiscoverRoute
-    
-    func navigationView<T>(route: DiscoverRoute, content: () -> T) -> AnyView where T : View {
+
+    func navigationView<T>(route: DiscoverRoute, content: () -> T) -> AnyView where T: View {
         switch route {
         case .detailView(let course):
             let detailView = AppServiceLocator.shared.detail.provideDetailView(course: course)

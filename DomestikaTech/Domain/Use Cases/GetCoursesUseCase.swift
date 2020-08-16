@@ -15,11 +15,11 @@ protocol GetCoursesUseCase {
 class GetCourses: GetCoursesUseCase {
 
     private let coursesRepository: CoursesFetchableRepository
-    
+
     init(coursesRepository: CoursesFetchableRepository) {
         self.coursesRepository = coursesRepository
     }
-    
+
     func exec() -> AnyPublisher<[Course], Error> {
         coursesRepository.fetchCourseList()
     }

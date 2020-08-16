@@ -39,7 +39,7 @@ class DetailUITests: XCTestCase {
 
         XCTAssertTrue(app.images["VideoOverlayImage"].waitForExistence(timeout: 0))
     }
-    
+
     func testNotShowImageVideoOverlay() {
         if isReadyToTest() {
             let app = UtilsUITest.getApplication()

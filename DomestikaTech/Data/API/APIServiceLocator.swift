@@ -8,7 +8,7 @@
 import Foundation
 
 class APIServiceLocator: BaseCoreServiceLocator {
-    
+
     func provideRestClient(baseURL: String) -> RestClient {
         return RestClient(baseUrl: baseURL)
     }

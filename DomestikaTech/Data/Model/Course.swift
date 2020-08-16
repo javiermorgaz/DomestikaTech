@@ -27,7 +27,7 @@ struct Course: Decodable, Hashable {
     let audio: String
     let subtitles: [String]
     let level: Level
-    
+
     enum CodingKeys: String, CodingKey {
         case courseId = "id"
         case thumbnail = "thumbnailUrl"
@@ -52,7 +52,7 @@ struct Course: Decodable, Hashable {
 struct Teacher: Decodable, Hashable {
     let name: String
     let avatar: String
-    
+
     enum CodingKeys: String, CodingKey {
         case name
         case avatar = "avatarUrl"

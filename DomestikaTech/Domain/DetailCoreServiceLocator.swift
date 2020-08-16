@@ -8,7 +8,7 @@
 import Foundation
 
 class DetailCoreServiceLocator: BaseCoreServiceLocator {
-    
+
     func provideGetPositiveReviewsUseCase() -> GetPositiveReviews {
         return GetPositiveReviews()
     }
