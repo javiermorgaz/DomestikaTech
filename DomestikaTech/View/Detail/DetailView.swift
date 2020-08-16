@@ -65,6 +65,7 @@ extension DetailView {
             .lineLimit(nil)
             .multilineTextAlignment(.leading)
             .fixedSize(horizontal: false, vertical: true)
+            .accessibility(identifier: "DetailTitle")
     }
     
     var Description: some View {
@@ -74,6 +75,7 @@ extension DetailView {
             .lineLimit(nil)
             .multilineTextAlignment(.leading)
             .fixedSize(horizontal: false, vertical: true)
+            .accessibility(identifier: "DetailDescription")
     }
     
     var Name: some View {
@@ -81,12 +83,14 @@ extension DetailView {
             .font(.headline)
             .foregroundColor(Color.darkTextColor)
             .fontWeight(.medium)
+            .accessibility(identifier: "DetailName")
     }
     
     var Location: some View {
         Text(viewModel.location)
             .font(.caption)
             .foregroundColor(Color.lightTextColor)
+            .accessibility(identifier: "DetailLocation")
     }
     
     var Avatar: some View {
@@ -169,6 +173,7 @@ struct PropertiesView: View {
             Text(property)
                 .font(.caption)
                 .foregroundColor(Color.darkTextColor)
+                .accessibility(identifier: "property")
             if let level = level {
                 Text(level.description)
                     .font(.caption)
@@ -177,6 +182,7 @@ struct PropertiesView: View {
                     .padding(.top, 3).padding(.bottom, 3).padding(.leading, 6).padding(.trailing, 6)
                     .background(level.color)
                     .cornerRadius(25)
+                    .accessibility(identifier: "DetailLevel")
             }
         })
     }

@@ -1,0 +1,52 @@
+[
+  {
+    "id": 387,
+    "thumbnailUrl": "http://mobile-assets.domestika.org/challenge/387-original.jpg",
+    "title": "Introduction to Adobe Photoshop",
+    "trailerUrl": "https://player.vimeo.com/external/295400375.hd.mp4?s=feac97d87265e818dfca5387a9b18d3ad7fff989&profile_id=175&oauth2_token_id=1121588336",
+    "description": "Learn Adobe Photoshop from scratch and master the best software for treatment, retouching and creation of digital images on the market",
+    "location": "Barcelona, Spain",
+    "teacher": {
+      "name": "Carles Marsal",
+      "avatarUrl": "http://mobile-assets.domestika.org/challenge/89569-original.jpg"
+    },
+    "reviews": {
+      "positive": 4008,
+      "total": 4100
+    },
+    "lessonsCount": 50,
+    "students": 161905,
+    "audio": "Spanish",
+    "subtitles": [
+      "English",
+      "Spanish",
+      "Portuguese"
+    ],
+    "level": "Beginner"
+  },
+  {
+    "id": "499",
+    "thumbnailUrl": "http://mobile-assets.domestika.org/challenge/499-original.jpg",
+    "title": "Introduction to Adobe Illustrator",
+    "trailerUrl": "https://player.vimeo.com/external/327709635.hd.mp4?s=cc8e8681cea8297addc2bcc5f0ac215251c4db8c&profile_id=174&oauth2_token_id=1121588336",
+    "description": "Learn Adobe Illustrator without any prior knowledge to create optimum vectorial graphics",
+    "location": "Ciudad de México, Mexico",
+    "teacher": {
+      "name": "Aarón Martínez",
+      "avatarUrl": "http://mobile-assets.domestika.org/challenge/243315-original.jpg"
+    },
+    "reviews": {
+      "positive": 1372,
+      "total": 1400
+    },
+    "lessonsCount": 77,
+    "students": 68859,
+    "audio": "Spanish",
+    "subtitles": [
+      "English",
+      "Portuguese",
+      "German"
+    ],
+    "level": "Intermediate"
+  }
+]

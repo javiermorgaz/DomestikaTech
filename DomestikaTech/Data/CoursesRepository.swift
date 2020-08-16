@@ -24,8 +24,5 @@ extension CoursesFetcherRepository: CoursesFetchableRepository {
     func fetchCourseList() -> AnyPublisher<[Course], Error> {
         return restClient.perform(DomestikaAPIRouter.courses)
     }
-    
-    func fetchImage(url: URL) -> AnyPublisher<Data, URLError> {
-        return restClient.load(url: url)
-    }
+
 }

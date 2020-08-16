@@ -7,16 +7,18 @@ target 'DomestikaTech' do
   inhibit_all_warnings!
 
   pod 'SDWebImageSwiftUI'
-  pod 'Sourcery'
   pod 'SwiftLint'
+  pod 'OHHTTPStubs/Swift'
 
   target 'DomestikaTechTests' do
     inherit! :search_paths
     pod 'SwiftLint'
+    pod 'OHHTTPStubs/Swift'
   end
 
   target 'DomestikaTechUITests' do
     pod 'SwiftLint'
+    pod 'OHHTTPStubs/Swift'
   end
 
 end

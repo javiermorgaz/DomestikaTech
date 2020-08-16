@@ -22,6 +22,8 @@ struct VideoPlayerObservableView: View {
     var body: some View {
         ZStack{
             VideoPlayerViewController(player: $player)
+                .accessibility(addTraits: .isButton)
+                .accessibility(identifier: "VideoPlayer")
                 .frame(height: 210)
                 .onAppear {
                     player.play()
@@ -65,6 +67,7 @@ extension VideoPlayerObservableView {
             WebImage(url: overlayImage)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
+                .accessibility(identifier: "VideoOverlayImage")
             ProgressView()
                 .progressViewStyle(CircularProgressViewStyle(tint: Color.white))
         }

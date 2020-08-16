@@ -23,7 +23,7 @@ enum DomestikaAPIRouter {
     }
     
     var path: String {
-        
+
         switch self {
         case .courses: return "\(ResourceKeys.challenge)/home.json"
         }

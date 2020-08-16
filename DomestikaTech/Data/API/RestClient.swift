@@ -36,13 +36,6 @@ struct RestClient: RestClientProtocol {
             .eraseToAnyPublisher()
     }
     
-    func load(url: URL) -> AnyPublisher<Data, URLError> {
-        return URLSession.shared
-            .dataTaskPublisher(for: url)
-            .map { $0.data }
-            .eraseToAnyPublisher()
-    }
-    
     private func asURLRequest(router:  DomestikaAPIRouter) -> URLRequest {
         let path = "\(baseUrl)\(router.path)"
         var components = URLComponents(string: path)

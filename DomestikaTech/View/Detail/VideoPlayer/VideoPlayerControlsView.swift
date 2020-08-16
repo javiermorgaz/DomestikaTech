@@ -66,6 +66,7 @@ extension VideoPlayerControlsView {
                 .font(.title)
                 .foregroundColor(.white)
                 .padding(20)
+                .accessibility(identifier: "BackwardButtonImage")
         }
     }
     

@@ -1,30 +1,42 @@
 PODS:
+  - OHHTTPStubs/Core (9.0.0)
+  - OHHTTPStubs/Default (9.0.0):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (9.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (9.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (9.0.0)
+  - OHHTTPStubs/Swift (9.0.0):
+    - OHHTTPStubs/Default
   - SDWebImage (5.8.4):
     - SDWebImage/Core (= 5.8.4)
   - SDWebImage/Core (5.8.4)
   - SDWebImageSwiftUI (1.5.0):
     - SDWebImage (~> 5.7)
-  - Sourcery (1.0.0)
   - SwiftLint (0.40.0)
 
 DEPENDENCIES:
+  - OHHTTPStubs/Swift
   - SDWebImageSwiftUI
-  - Sourcery
   - SwiftLint
 
 SPEC REPOS:
   trunk:
+    - OHHTTPStubs
     - SDWebImage
     - SDWebImageSwiftUI
-    - Sourcery
     - SwiftLint
 
 SPEC CHECKSUMS:
+  OHHTTPStubs: cb29d2a9d09a828ecb93349a2b0c64f99e0db89f
   SDWebImage: cf6922231e95550934da2ada0f20f2becf2ceba9
   SDWebImageSwiftUI: 43687ffe232ddd33fe0659498b7ca9884fdd6b35
-  Sourcery: 928a146ea9b777fa64b0c6ce915c4128b4488cff
   SwiftLint: 4154893c73a4c52d6240195507eb7a3e3c64087e
 
-PODFILE CHECKSUM: c70e7f1013fdd28dca2f8bd4ee6ee5db6b23ee7f
+PODFILE CHECKSUM: e273ad66dcaddb7af0eebb45db4e005927310389
 
 COCOAPODS: 1.9.1
