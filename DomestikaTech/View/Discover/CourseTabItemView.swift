@@ -19,7 +19,7 @@ struct CourseTabItemView: View {
         self.viewModel = viewModel
         self.router = router
     }
-    
+
     var body: some View {
         ZStack {
             CourseImage
@@ -40,7 +40,7 @@ struct CourseTabItemView: View {
 }
 
 extension CourseTabItemView {
-    
+
     var CourseImage: some View {
         GeometryReader { geometry in
             WebImage(url: viewModel.image)
@@ -51,7 +51,7 @@ extension CourseTabItemView {
                 .clipped()
         }
     }
-    
+
     var Title: some View {
         Text(viewModel.title)
             .font(.title2)
@@ -61,7 +61,7 @@ extension CourseTabItemView {
             .multilineTextAlignment(.center)
             .fixedSize(horizontal: false, vertical: true)
     }
-    
+
     var WatchButton: some View {
         router.navigationView(route: .detailView(course: viewModel.course)) {
             Text(LocalizedStringKey("watch"))
@@ -74,7 +74,7 @@ extension CourseTabItemView {
         .background(Color.white)
         .cornerRadius(3)
     }
-    
+
     private func getDetailView(course: Course) -> DetailView {
         return AppServiceLocator.shared.detail.provideDetailView(course: course)
     }

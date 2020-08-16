@@ -1,0 +1,39 @@
+opt_in_rules:
+  - trailing_closure
+  - overridden_super_call
+  
+disabled_rules:
+  - closing_brace
+  - identifier_name         # short identifiers such as "ad" make sense sometimes
+  - type_name               # same here
+  - shorthand_operator      
+  - force_cast              # parsers have lots of force cast
+  - todo                    # we already have some TODO and FIXME comments
+  - unused_optional_binding
+  - nesting
+  - cyclomatic_complexity
+  - function_parameter_count
+  - function_body_length    # we will enable length rules at some point in the future
+  - type_body_length
+  - file_length
+  - line_length
+  - leading_whitespace      # soon…
+  - syntactic_sugar         # makes code less readable sometimes
+  - for_where               # makes snse, but we don't really care for now
+  - weak_delegate           # good in practice, but lots of edge cases in our architecture
+  - trailing_closure        # makes code less readable sometimes
+
+excluded:
+  - Pods
+  - vendor
+  - Codegen/Sourcery
+
+# per-rule configuration
+
+line_length: 160
+trailing_comma:
+  mandatory_comma: true
+overridden_super_call:
+  severity: error
+large_tuple:
+  warning: 3

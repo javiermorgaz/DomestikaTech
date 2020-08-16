@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,7 +24,6 @@
 		1E30A3B824E2EF600077B33E /* CourseItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E30A3B724E2EF600077B33E /* CourseItemViewModel.swift */; };
 		1E30A3BA24E2EF850077B33E /* CourseGridItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E30A3B924E2EF850077B33E /* CourseGridItemView.swift */; };
 		1E67894824E3DE1400765CA2 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E67894724E3DE1400765CA2 /* DetailView.swift */; };
-		1E67894B24E3F4CA00765CA2 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 1E67894A24E3F4CA00765CA2 /* SDWebImageSwiftUI */; };
 		1E67894D24E438B100765CA2 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E67894C24E438B100765CA2 /* Colors.xcassets */; };
 		1E67894F24E43A4F00765CA2 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E67894E24E43A4F00765CA2 /* Colors.swift */; };
 		1E67895224E4417C00765CA2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1E67895124E4417C00765CA2 /* Localizable.strings */; };
@@ -46,6 +45,9 @@
 		1ED9198924E80B4100C12860 /* DiscoverRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED9198824E80B4100C12860 /* DiscoverRouter.swift */; };
 		1ED9198B24E823E900C12860 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ED9198A24E823E900C12860 /* Launch Screen.storyboard */; };
 		1ED9198E24E829A300C12860 /* VideoPlayerControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED9198D24E829A300C12860 /* VideoPlayerControlsView.swift */; };
+		71378553C7A6BC365321D52A /* Pods_DomestikaTech_DomestikaTechUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71193855AD1111EA33F9C500 /* Pods_DomestikaTech_DomestikaTechUITests.framework */; };
+		F223D17EFE72B96583B8F3BE /* Pods_DomestikaTech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83AD78733768C1CBEF088AC9 /* Pods_DomestikaTech.framework */; };
+		FFD9C4B98C2DBF47280BF976 /* Pods_DomestikaTechTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8611ED3B468F0B19C8EB22BE /* Pods_DomestikaTechTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +112,15 @@
 		1ED9198824E80B4100C12860 /* DiscoverRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverRouter.swift; sourceTree = "<group>"; };
 		1ED9198A24E823E900C12860 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		1ED9198D24E829A300C12860 /* VideoPlayerControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerControlsView.swift; sourceTree = "<group>"; };
+		218EEAFB150B00B4FD559264 /* Pods-DomestikaTech.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DomestikaTech.release.xcconfig"; path = "Target Support Files/Pods-DomestikaTech/Pods-DomestikaTech.release.xcconfig"; sourceTree = "<group>"; };
+		4B01AB5959822885AC03808C /* Pods-DomestikaTech-DomestikaTechUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DomestikaTech-DomestikaTechUITests.release.xcconfig"; path = "Target Support Files/Pods-DomestikaTech-DomestikaTechUITests/Pods-DomestikaTech-DomestikaTechUITests.release.xcconfig"; sourceTree = "<group>"; };
+		71193855AD1111EA33F9C500 /* Pods_DomestikaTech_DomestikaTechUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DomestikaTech_DomestikaTechUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D7CE02DC52978237D2A5512 /* Pods-DomestikaTech-DomestikaTechUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DomestikaTech-DomestikaTechUITests.debug.xcconfig"; path = "Target Support Files/Pods-DomestikaTech-DomestikaTechUITests/Pods-DomestikaTech-DomestikaTechUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		83AD78733768C1CBEF088AC9 /* Pods_DomestikaTech.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DomestikaTech.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8611ED3B468F0B19C8EB22BE /* Pods_DomestikaTechTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DomestikaTechTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3DC1314171F3CC0A963A3AD /* Pods-DomestikaTechTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DomestikaTechTests.debug.xcconfig"; path = "Target Support Files/Pods-DomestikaTechTests/Pods-DomestikaTechTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AEC3EAF271936CDB827D1F4C /* Pods-DomestikaTechTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DomestikaTechTests.release.xcconfig"; path = "Target Support Files/Pods-DomestikaTechTests/Pods-DomestikaTechTests.release.xcconfig"; sourceTree = "<group>"; };
+		C3F7217E71C8466300BBAED1 /* Pods-DomestikaTech.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DomestikaTech.debug.xcconfig"; path = "Target Support Files/Pods-DomestikaTech/Pods-DomestikaTech.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E67894B24E3F4CA00765CA2 /* SDWebImageSwiftUI in Frameworks */,
+				F223D17EFE72B96583B8F3BE /* Pods_DomestikaTech.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFD9C4B98C2DBF47280BF976 /* Pods_DomestikaTechTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,12 +144,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71378553C7A6BC365321D52A /* Pods_DomestikaTech_DomestikaTechUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		057E3936FA7A3CAFA60E2D72 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				83AD78733768C1CBEF088AC9 /* Pods_DomestikaTech.framework */,
+				71193855AD1111EA33F9C500 /* Pods_DomestikaTech_DomestikaTechUITests.framework */,
+				8611ED3B468F0B19C8EB22BE /* Pods_DomestikaTechTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1E30A32C24E27E4C0077B33E = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +168,8 @@
 				1E30A34924E27E4E0077B33E /* DomestikaTechTests */,
 				1E30A35424E27E4F0077B33E /* DomestikaTechUITests */,
 				1E30A33624E27E4C0077B33E /* Products */,
+				E0337144F668AE8E2359F51E /* Pods */,
+				057E3936FA7A3CAFA60E2D72 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -324,6 +349,19 @@
 			path = VideoPlayer;
 			sourceTree = "<group>";
 		};
+		E0337144F668AE8E2359F51E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C3F7217E71C8466300BBAED1 /* Pods-DomestikaTech.debug.xcconfig */,
+				218EEAFB150B00B4FD559264 /* Pods-DomestikaTech.release.xcconfig */,
+				7D7CE02DC52978237D2A5512 /* Pods-DomestikaTech-DomestikaTechUITests.debug.xcconfig */,
+				4B01AB5959822885AC03808C /* Pods-DomestikaTech-DomestikaTechUITests.release.xcconfig */,
+				A3DC1314171F3CC0A963A3AD /* Pods-DomestikaTechTests.debug.xcconfig */,
+				AEC3EAF271936CDB827D1F4C /* Pods-DomestikaTechTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -331,18 +369,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E30A35A24E27E4F0077B33E /* Build configuration list for PBXNativeTarget "DomestikaTech" */;
 			buildPhases = (
+				8E29B3C4AC7F6AD77CCD4079 /* [CP] Check Pods Manifest.lock */,
 				1E30A33124E27E4C0077B33E /* Sources */,
 				1E30A33224E27E4C0077B33E /* Frameworks */,
 				1E30A33324E27E4C0077B33E /* Resources */,
+				D5310304F3C0AEFC61D91C82 /* [CP] Embed Pods Frameworks */,
+				1E1EF96024E9239500E737C6 /* SwftLint Script */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = DomestikaTech;
-			packageProductDependencies = (
-				1E67894A24E3F4CA00765CA2 /* SDWebImageSwiftUI */,
-			);
 			productName = DomestikaTech;
 			productReference = 1E30A33524E27E4C0077B33E /* DomestikaTech.app */;
 			productType = "com.apple.product-type.application";
@@ -351,6 +389,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E30A35D24E27E4F0077B33E /* Build configuration list for PBXNativeTarget "DomestikaTechTests" */;
 			buildPhases = (
+				8BB635CB8F0501073952AFD5 /* [CP] Check Pods Manifest.lock */,
 				1E30A34224E27E4E0077B33E /* Sources */,
 				1E30A34324E27E4E0077B33E /* Frameworks */,
 				1E30A34424E27E4E0077B33E /* Resources */,
@@ -369,9 +408,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E30A36024E27E4F0077B33E /* Build configuration list for PBXNativeTarget "DomestikaTechUITests" */;
 			buildPhases = (
+				DECBEC9C85213C552EB7B295 /* [CP] Check Pods Manifest.lock */,
 				1E30A34D24E27E4F0077B33E /* Sources */,
 				1E30A34E24E27E4F0077B33E /* Frameworks */,
 				1E30A34F24E27E4F0077B33E /* Resources */,
+				CFB1F84C540F54C0929A64DF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -414,9 +455,6 @@
 				Base,
 			);
 			mainGroup = 1E30A32C24E27E4C0077B33E;
-			packageReferences = (
-				1E67894924E3F4CA00765CA2 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
-			);
 			productRefGroup = 1E30A33624E27E4C0077B33E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -456,6 +494,127 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E1EF96024E9239500E737C6 /* SwftLint Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "SwftLint Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
+		};
+		8BB635CB8F0501073952AFD5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DomestikaTechTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E29B3C4AC7F6AD77CCD4079 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DomestikaTech-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CFB1F84C540F54C0929A64DF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DomestikaTech-DomestikaTechUITests/Pods-DomestikaTech-DomestikaTechUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DomestikaTech-DomestikaTechUITests/Pods-DomestikaTech-DomestikaTechUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DomestikaTech-DomestikaTechUITests/Pods-DomestikaTech-DomestikaTechUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5310304F3C0AEFC61D91C82 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DomestikaTech/Pods-DomestikaTech-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DomestikaTech/Pods-DomestikaTech-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DomestikaTech/Pods-DomestikaTech-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DECBEC9C85213C552EB7B295 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DomestikaTech-DomestikaTechUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1E30A33124E27E4C0077B33E /* Sources */ = {
@@ -646,6 +805,7 @@
 		};
 		1E30A35B24E27E4F0077B33E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3F7217E71C8466300BBAED1 /* Pods-DomestikaTech.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -668,6 +828,7 @@
 		};
 		1E30A35C24E27E4F0077B33E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 218EEAFB150B00B4FD559264 /* Pods-DomestikaTech.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -690,6 +851,7 @@
 		};
 		1E30A35E24E27E4F0077B33E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3DC1314171F3CC0A963A3AD /* Pods-DomestikaTechTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -712,6 +874,7 @@
 		};
 		1E30A35F24E27E4F0077B33E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEC3EAF271936CDB827D1F4C /* Pods-DomestikaTechTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -734,6 +897,7 @@
 		};
 		1E30A36124E27E4F0077B33E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D7CE02DC52978237D2A5512 /* Pods-DomestikaTech-DomestikaTechUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -754,6 +918,7 @@
 		};
 		1E30A36224E27E4F0077B33E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B01AB5959822885AC03808C /* Pods-DomestikaTech-DomestikaTechUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -812,25 +977,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		1E67894924E3F4CA00765CA2 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.5.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		1E67894A24E3F4CA00765CA2 /* SDWebImageSwiftUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1E67894924E3F4CA00765CA2 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
-			productName = SDWebImageSwiftUI;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1E30A32D24E27E4C0077B33E /* Project object */;
 }
