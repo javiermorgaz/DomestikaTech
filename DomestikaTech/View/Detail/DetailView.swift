@@ -10,21 +10,21 @@ import AVKit
 import SDWebImageSwiftUI
 
 struct DetailView: View {
-    
+
     @Environment(\.presentationMode) var presentationMode
     @GestureState private var dragOffset = CGSize.zero
-    
+
     private var viewModel: DetailViewModel
-    
+
     init(viewModel: DetailViewModel) {
         self.viewModel = viewModel
     }
-    
+
     var body: some View {
-        
+
         ScrollView(.vertical, showsIndicators: false) {
             VideoPlayerView(url: viewModel.trailer, overlayImage: viewModel.image)
-            
+
             VStack(alignment: .leading) {
                 VStack(alignment: .leading, spacing: 6, content: {
                     Spacer().frame(height: 25)
@@ -48,15 +48,15 @@ struct DetailView: View {
         }
         .navigationBarTitle("", displayMode: .inline)
         .navigationBarBackButtonHidden(true)
-        .navigationBarItems(leading: BackButton,trailing: ShareButton)
-        .gesture(DragGesture().updating($dragOffset, body: { (value, state, transaction) in
+        .navigationBarItems(leading: BackButton, trailing: ShareButton)
+        .gesture(DragGesture().updating($dragOffset, body: { (value, _, _) in
             start(value)
         }))
     }
 }
 
 extension DetailView {
-    
+
     var Title: some View {
         Text(viewModel.title)
             .font(.title2)
@@ -67,7 +67,7 @@ extension DetailView {
             .fixedSize(horizontal: false, vertical: true)
             .accessibility(identifier: "DetailTitle")
     }
-    
+
     var Description: some View {
         Text(viewModel.description)
             .font(.caption)
@@ -77,7 +77,7 @@ extension DetailView {
             .fixedSize(horizontal: false, vertical: true)
             .accessibility(identifier: "DetailDescription")
     }
-    
+
     var Name: some View {
         Text(viewModel.teacherName)
             .font(.headline)
@@ -85,14 +85,14 @@ extension DetailView {
             .fontWeight(.medium)
             .accessibility(identifier: "DetailName")
     }
-    
+
     var Location: some View {
         Text(viewModel.location)
             .font(.caption)
             .foregroundColor(Color.lightTextColor)
             .accessibility(identifier: "DetailLocation")
     }
-    
+
     var Avatar: some View {
         WebImage(url: viewModel.avatar)
             .resizable()
@@ -102,12 +102,12 @@ extension DetailView {
             .cornerRadius(22.5)
             .padding(.top, 8)
     }
-    
+
     var Separator: some View {
         Rectangle().fill(Color.separatorColor)
             .frame(height: 1)
     }
-    
+
     var Properties: some View {
         VStack(alignment: .leading, spacing: 15, content: {
             Spacer().frame(height: 20)
@@ -121,42 +121,42 @@ extension DetailView {
             Spacer().frame(height: 10)
         })
     }
-    
+
     var BackButton: some View {
         Button(action: {
             self.presentationMode.wrappedValue.dismiss()
-        }) {
+        }, label: {
             Image("Back")
                 .renderingMode(.template)
-        }
+        })
         .buttonStyle(PlainButtonStyle())
         .frame(width: 30, height: 30)
     }
-    
+
     var ShareButton: some View {
         Button(action: {
             print("Share button was tapped")
-        }) {
+        }, label: {
             Image("Share")
                 .renderingMode(.template)
-        }
+        })
         .buttonStyle(PlainButtonStyle())
         .frame(width: 30, height: 30)
     }
-    
+
     private func start(_ value: DragGesture.Value) {
-        if(value.startLocation.x < 20 && value.translation.width > 100) {
+        if value.startLocation.x < 20 && value.translation.width > 100 {
             self.presentationMode.wrappedValue.dismiss()
         }
     }
 }
 
 struct PropertiesView: View {
-    
+
     private let icon: String
     private let property: String
     private let level: (description: String, color: Color)?
-    
+
     init(icon: String,
          property: String,
          level: (description: String, color: Color)? = nil) {
@@ -164,7 +164,7 @@ struct PropertiesView: View {
         self.property = property
         self.level = level
     }
-    
+
     var body: some View {
         HStack(spacing: 10, content: {
             Image(icon)

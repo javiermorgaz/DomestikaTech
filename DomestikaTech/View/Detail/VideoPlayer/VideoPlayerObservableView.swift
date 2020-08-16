@@ -10,17 +10,17 @@ import AVKit
 import SDWebImageSwiftUI
 
 struct VideoPlayerObservableView: View {
-    
+
     @Binding var player: AVPlayer
     @State var isplaying = true
     @State var showControls = false
     @State var showOverlayImage = true
-    @State var timeObserver: Any? = nil
+    @State var timeObserver: Any?
     let overlayImage: URL
     let readyObserver: VideoPlayerObserver
-    
+
     var body: some View {
-        ZStack{
+        ZStack {
             VideoPlayerViewController(player: $player)
                 .accessibility(addTraits: .isButton)
                 .accessibility(identifier: "VideoPlayer")
@@ -28,7 +28,7 @@ struct VideoPlayerObservableView: View {
                 .onAppear {
                     player.play()
                 }
-                .onDisappear() {
+                .onDisappear {
                     stopPlayer()
                 }
                 .onTapGesture {
@@ -49,7 +49,7 @@ struct VideoPlayerObservableView: View {
             }
         }
     }
-    
+
     private func stopPlayer() {
         player.pause()
         player.replaceCurrentItem(with: nil)
@@ -61,9 +61,9 @@ struct VideoPlayerObservableView: View {
 }
 
 extension VideoPlayerObservableView {
-    
+
     var OverlayImage: some View {
-        ZStack{
+        ZStack {
             WebImage(url: overlayImage)
                 .resizable()
                 .aspectRatio(contentMode: .fill)

@@ -11,7 +11,7 @@ import XCTest
 class GetPositiveReviewsTests: XCTestCase {
 
     var getPositiveReviews: GetPositiveReviews!
-    
+
     override func setUpWithError() throws {
         getPositiveReviews = AppServiceLocator.shared.core.detail.provideGetPositiveReviewsUseCase()
     }

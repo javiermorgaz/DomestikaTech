@@ -10,7 +10,7 @@ import OHHTTPStubs
 
 @main
 struct DomestikaTechApp: App {
-    
+
     var body: some Scene {
         WindowGroup {
             buildContentView()

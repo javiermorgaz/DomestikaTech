@@ -9,7 +9,7 @@ import Foundation
 import XCTest
 
 class UtilsUITest {
-    
+
     static func getApplication() -> XCUIApplication {
         var app = XCUIApplication()
         app = XCUIApplication()

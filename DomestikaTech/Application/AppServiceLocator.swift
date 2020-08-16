@@ -13,11 +13,11 @@ class BaseServiceLocator {
 
 class AppServiceLocator {
     private(set) static var shared = AppServiceLocator.Builder().build()
-    
+
     let core: AppCoreServiceLocator
     let discover: DiscoverServiceLocator
     let detail: DetailServiceLocator
-    
+
     init(core: AppCoreServiceLocator,
          discover: DiscoverServiceLocator,
          detail: DetailServiceLocator
@@ -25,7 +25,7 @@ class AppServiceLocator {
         self.core = core
         self.discover = discover
         self.detail = detail
-        
+
         discover.root = self
         detail.root = self
     }
@@ -37,8 +37,7 @@ extension AppServiceLocator {
         private var core = AppCoreServiceLocator.shared
         private var discover = DiscoverServiceLocator()
         private var detail = DetailServiceLocator()
-        
-        
+
         func build() -> AppServiceLocator {
             return AppServiceLocator(core: core,
                                      discover: discover,

@@ -16,9 +16,9 @@ class GetCoursesTests: XCTestCase {
     private var restClient: RestClient!
     private var getCoursesUseCase: GetCourses!
     private var asyncExpectation: XCTestExpectation!
-    
+
     private var cancellable = Set<AnyCancellable>()
-    
+
     override func setUpWithError() throws {
         getCoursesUseCase = AppServiceLocator.shared.core.discover.provideGetCoursesUseCase()
     }
@@ -92,7 +92,7 @@ class GetCoursesTests: XCTestCase {
 
         waitForExpectations(timeout: 1, handler: nil)
     }
-    
+
     private func checkModel(course: Course) {
         XCTAssertEqual(course.courseId, "387")
         XCTAssertEqual(course.thumbnail, "http://mobile-assets.domestika.org/challenge/387-original.jpg")
