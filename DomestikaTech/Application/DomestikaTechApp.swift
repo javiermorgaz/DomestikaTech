@@ -13,6 +13,7 @@ struct DomestikaTechApp: App {
         WindowGroup {
             buildContentView()
         }
+        
     }
 }
 
