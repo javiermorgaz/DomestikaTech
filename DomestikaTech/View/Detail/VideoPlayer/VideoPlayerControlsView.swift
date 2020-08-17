@@ -111,6 +111,7 @@ extension VideoPlayerControlsView {
     var Time: some View {
         Text("\(currentTime.toTime)")
             .font(.caption)
+            .foregroundColor(Color.black)
             .frame(width: 45, height: 20)
             .background(Color.white)
             .cornerRadius(5)
