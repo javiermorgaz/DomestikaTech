@@ -11,7 +11,7 @@ Two screens: CoursesList and CourseDetail.
 
 ## Prerequisites
 
-- Xcode 14 beta 4
+- Xcode 12 beta 4
 - Swift 5
 - CocoaPods
 - For full functional testability an iOS 14 beta device is required
