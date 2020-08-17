@@ -49,15 +49,6 @@ struct VideoPlayerObservableView: View {
             }
         }
     }
-
-    private func stopPlayer() {
-        player.pause()
-        player.replaceCurrentItem(with: nil)
-        if let timeObserver = timeObserver {
-            player.removeTimeObserver(timeObserver)
-            self.timeObserver = nil
-        }
-    }
 }
 
 extension VideoPlayerObservableView {
@@ -70,6 +61,15 @@ extension VideoPlayerObservableView {
                 .accessibility(identifier: "VideoOverlayImage")
             ProgressView()
                 .progressViewStyle(CircularProgressViewStyle(tint: Color.white))
+        }
+    }
+
+    private func stopPlayer() {
+        player.pause()
+        player.replaceCurrentItem(with: nil)
+        if let timeObserver = timeObserver {
+            player.removeTimeObserver(timeObserver)
+            self.timeObserver = nil
         }
     }
 }

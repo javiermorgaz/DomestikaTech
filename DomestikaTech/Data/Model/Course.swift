@@ -48,18 +48,3 @@ struct Course: Decodable, Hashable {
         return lhs.courseId == rhs.courseId
     }
 }
-
-struct Teacher: Decodable, Hashable {
-    let name: String
-    let avatar: String
-
-    enum CodingKeys: String, CodingKey {
-        case name
-        case avatar = "avatarUrl"
-    }
-}
-
-struct Reviews: Decodable, Hashable {
-    let positive: Int
-    let total: Int
-}

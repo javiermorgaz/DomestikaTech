@@ -24,7 +24,6 @@ struct DetailView: View {
 
         ScrollView(.vertical, showsIndicators: false) {
             VideoPlayerView(url: viewModel.trailer, overlayImage: viewModel.image)
-
             VStack(alignment: .leading) {
                 VStack(alignment: .leading, spacing: 6, content: {
                     Spacer().frame(height: 25)
