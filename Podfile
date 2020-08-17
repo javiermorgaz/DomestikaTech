@@ -6,9 +6,9 @@ target 'DomestikaTech' do
   use_frameworks!
   inhibit_all_warnings!
 
-  pod 'SDWebImageSwiftUI'
-  pod 'SwiftLint'
-  pod 'OHHTTPStubs/Swift'
+  pod 'SDWebImageSwiftUI', '~> 1.5.0'
+  pod 'SwiftLint', '~> 0.40.0'
+  pod 'OHHTTPStubs/Swift', '~> 9.0.0'
 
   target 'DomestikaTechTests' do
     inherit! :search_paths

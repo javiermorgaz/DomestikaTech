@@ -21,8 +21,10 @@ PODS:
 
 DEPENDENCIES:
   - OHHTTPStubs/Swift
-  - SDWebImageSwiftUI
+  - OHHTTPStubs/Swift (~> 9.0.0)
+  - SDWebImageSwiftUI (~> 1.5.0)
   - SwiftLint
+  - SwiftLint (~> 0.40.0)
 
 SPEC REPOS:
   trunk:
@@ -37,6 +39,6 @@ SPEC CHECKSUMS:
   SDWebImageSwiftUI: 43687ffe232ddd33fe0659498b7ca9884fdd6b35
   SwiftLint: 4154893c73a4c52d6240195507eb7a3e3c64087e
 
-PODFILE CHECKSUM: e273ad66dcaddb7af0eebb45db4e005927310389
+PODFILE CHECKSUM: 01e9cd6f3eec05691e9b4aeb4d66f70547083af4
 
 COCOAPODS: 1.9.1
